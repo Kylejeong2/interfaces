@@ -300,6 +300,7 @@ button {
   width: min(84%, 318px);
   padding: 8px;
   border: 1px solid rgba(17, 17, 15, 0.18);
+  border-radius: 3px;
   background: rgba(240, 238, 232, 0.88);
   box-shadow:
     0 28px 70px rgba(38, 35, 29, 0.16),
@@ -309,14 +310,6 @@ button {
   cursor: pointer;
   appearance: none;
   transform: translateX(-50%);
-  clip-path: polygon(
-    0 0,
-    calc(100% - 13px) 0,
-    100% 13px,
-    100% 100%,
-    13px 100%,
-    0 calc(100% - 13px)
-  );
   transform-style: preserve-3d;
 }
 .constellation-slot[data-side='above'] .constellation-card {
