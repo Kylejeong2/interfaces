@@ -11,6 +11,12 @@ const formatDate = new Intl.DateTimeFormat('en-US', {
   timeZone: 'UTC',
 })
 
+const formatMonth = new Intl.DateTimeFormat('en-US', {
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+})
+
 export function Museum() {
   const [activeArtifact, setActiveArtifact] = useState<Artifact | null>(null)
   const [activeForm, setActiveForm] = useState<'All' | InteractionForm>('All')
@@ -153,7 +159,7 @@ export function Museum() {
                     transition={{ duration: 0.2 }}
                   >
                     <div className="card-index">
-                      <span>{artifact.date.slice(5).replace('-', '.')}</span>
+                      <span>{formatCardDate(artifact)}</span>
                       {artifact.popularity >= 93 && (
                         <span className="landmark-label">Landmark</span>
                       )}
@@ -284,8 +290,7 @@ function ArtifactDetail({
         <div className="detail-copy">
           <div className="detail-heading">
             <p>
-              {artifact.maker} ·{' '}
-              {formatDate.format(new Date(`${artifact.date}T00:00:00Z`))}
+              {artifact.maker} · {formatArtifactDate(artifact)}
             </p>
             <h2 id="artifact-title">{artifact.name}</h2>
             <h3>{artifact.edition}</h3>
@@ -337,4 +342,16 @@ function ArtifactDetail({
 function getAdjacent(items: Array<Artifact>, active: Artifact, offset: number) {
   const index = items.findIndex((artifact) => artifact.id === active.id)
   return items[(index + offset + items.length) % items.length] ?? active
+}
+
+function formatArtifactDate(artifact: Artifact) {
+  const date = new Date(`${artifact.date}T00:00:00Z`)
+  return artifact.datePrecision === 'month'
+    ? formatMonth.format(date)
+    : formatDate.format(date)
+}
+
+function formatCardDate(artifact: Artifact) {
+  const [month, day] = artifact.date.slice(5).split('-')
+  return artifact.datePrecision === 'month' ? `${month}.—` : `${month}.${day}`
 }

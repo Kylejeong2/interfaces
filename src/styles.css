@@ -314,6 +314,11 @@ button {
   object-fit: cover;
   display: block;
 }
+
+.detail-visual-wrap .artifact-visual--image img {
+  object-fit: contain;
+  background: #e3e1dc;
+}
 .interface-chrome {
   height: 22px;
   display: flex;

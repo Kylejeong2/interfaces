@@ -11,6 +11,7 @@ export type InteractionForm =
   | 'Video'
   | 'Audio'
   | 'Embodied'
+  | 'Recommendation'
 
 export type ProductLayer =
   | 'Assistant'
@@ -31,6 +32,7 @@ export type ArtifactSource = {
 export type Artifact = {
   id: string
   date: string
+  datePrecision?: 'day' | 'month'
   year: number
   name: string
   edition: string
@@ -78,6 +80,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 96,
     visual: 'voice',
     accent: '#7d6bff',
+    imageUrl: '/artifacts/siri-2011.png',
+    imageAlt: 'The original Siri interface in iOS 5',
     sources: [
       {
         label: 'Apple introduces iPhone 4S',
@@ -126,7 +130,8 @@ export const artifacts: Array<Artifact> = [
   },
   {
     id: 'amazon-echo-2014',
-    date: '2014-11-06',
+    date: '2014-11-01',
+    datePrecision: 'month',
     year: 2014,
     name: 'Amazon Echo',
     edition: 'Alexa',
@@ -245,6 +250,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 92,
     visual: 'chat',
     accent: '#4285f4',
+    imageUrl: '/artifacts/google-assistant-2016.png',
+    imageAlt: 'The original Google Assistant conversational interface',
     sources: [
       {
         label: 'Google Assistant announcement',
@@ -277,6 +284,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 89,
     visual: 'vision',
     accent: '#2bb673',
+    imageUrl: '/artifacts/google-lens-2017.png',
+    imageAlt: 'Google Lens recognizing the world through a phone camera',
     sources: [
       {
         label: 'Google Lens introduction',
@@ -310,6 +319,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 84,
     visual: 'agent',
     accent: '#e65f51',
+    imageUrl: '/artifacts/google-duplex-2018.png',
+    imageAlt: 'Google Assistant showing a completed Duplex reservation',
     sources: [
       {
         label: 'Google Duplex research and principles',
@@ -343,6 +354,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 87,
     visual: 'code',
     accent: '#587df2',
+    imageUrl: '/artifacts/smart-compose-2018.png',
+    imageAlt: 'Gmail Smart Compose suggesting inline email text',
     sources: [
       {
         label: 'Gmail Smart Compose announcement',
@@ -476,6 +489,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 93,
     visual: 'canvas',
     accent: '#6a8cff',
+    imageUrl: '/artifacts/midjourney-discord-2022.jpg',
+    imageAlt: 'Midjourney image generation inside Discord',
     sources: [
       {
         label: 'Midjourney documentation',
@@ -573,6 +588,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 92,
     visual: 'search',
     accent: '#2176ff',
+    imageUrl: '/artifacts/new-bing-2023.png',
+    imageAlt: 'The New Bing conversational search interface',
     sources: [
       {
         label: 'Reinventing search with AI',
@@ -688,18 +705,19 @@ export const artifacts: Array<Artifact> = [
   },
   {
     id: 'sora-2024',
-    date: '2024-02-15',
+    date: '2024-12-09',
     year: 2024,
     name: 'Sora',
-    edition: 'Text to video',
+    edition: 'Storyboard interface',
     maker: 'OpenAI',
     description:
-      'A prompt-and-gallery interface that made minute-long generated video feel like a coherent new creative medium.',
+      'A standalone generative-video studio combining prompts, uploads, a frame-level storyboard, remixing, blending, and extension.',
     changed:
-      'The still-image prompt expanded into time, camera movement, and scene continuity. Generation became something to scrub and watch.',
-    lineage: 'Text-to-image → short video clips → generative video editor',
+      'Text-to-video moved from a prompt-and-wait demonstration into a temporal creative interface with direct control over sequence and pacing.',
+    lineage:
+      'Text-to-image → research video demos → storyboard-based generative video editor',
     impact:
-      'Sora’s first examples reset expectations for the fidelity and temporal coherence of generated video.',
+      'The February preview changed expectations for generated video; the December release turned that capability into a public creative product.',
     forms: ['Canvas', 'Vision'],
     layers: ['Creative tool'],
     popularity: 91,
@@ -707,14 +725,14 @@ export const artifacts: Array<Artifact> = [
     accent: '#ff664f',
     sources: [
       {
-        label: 'Introducing Sora',
-        url: 'https://openai.com/index/sora/',
+        label: 'Sora is here',
+        url: 'https://openai.com/index/sora-is-here/',
         kind: 'source',
       },
       {
-        label: 'Sora research preview',
-        url: 'https://www.youtube.com/watch?v=HK6y8DAPN_0',
-        kind: 'watch',
+        label: 'Sora product',
+        url: 'https://openai.com/sora/',
+        kind: 'source',
       },
     ],
   },
@@ -908,6 +926,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 88,
     visual: 'agent',
     accent: '#111111',
+    imageUrl: '/artifacts/operator-2025.png',
+    imageAlt: 'Operator working through a task in a visible browser',
     sources: [
       {
         label: 'Introducing Operator',
@@ -940,6 +960,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 91,
     visual: 'search',
     accent: '#3266d5',
+    imageUrl: '/artifacts/deep-research-2025.png',
+    imageAlt: 'ChatGPT Deep Research activity and source panel',
     sources: [
       {
         label: 'Introducing deep research',
@@ -973,6 +995,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 92,
     visual: 'code',
     accent: '#d97757',
+    imageUrl: '/artifacts/claude-code-2025.png',
+    imageAlt: 'Claude Code running as a terminal coding agent',
     sources: [
       {
         label: 'Claude Code announcement',
@@ -1287,6 +1311,338 @@ export const artifacts: Array<Artifact> = [
       },
     ],
   },
+  {
+    id: 'spotify-discover-weekly-2015',
+    date: '2015-07-01',
+    datePrecision: 'month',
+    year: 2015,
+    name: 'Discover Weekly',
+    edition: 'A playlist made for you',
+    maker: 'Spotify',
+    description:
+      'A personalized playlist refreshed every Monday from each listener’s behavior and taste graph.',
+    changed:
+      'The recommendation model became a finite editorial object with cover art, a cadence, and a clear promise rather than an invisible ranking layer.',
+    lineage:
+      'Algorithmic radio → Discover Weekly → Release Radar, Blend, DJ, and AI Playlist',
+    impact:
+      'Within its first year Spotify said Discover Weekly connected 40 million listeners with nearly five billion tracks.',
+    forms: ['Recommendation', 'Audio'],
+    layers: ['Consumer product'],
+    popularity: 91,
+    visual: 'cards',
+    accent: '#1db954',
+    sources: [
+      {
+        label: 'Five years of Discover Weekly',
+        url: 'https://newsroom.spotify.com/2020-07-09/spotify-users-have-spent-over-2-3-billion-hours-streaming-discover-weekly-playlists-since-2015/',
+        kind: 'source',
+      },
+      {
+        label: 'Spotify discovery and artist impact',
+        url: 'https://artists.spotify.com/it/blog/discovery-on-spotify-what-it-means-for-artists',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'tesla-autopilot-2015',
+    date: '2015-10-01',
+    datePrecision: 'month',
+    year: 2015,
+    name: 'Tesla Autopilot',
+    edition: 'Supervising the machine',
+    maker: 'Tesla',
+    description:
+      'An instrument-cluster interface visualizing lanes, nearby vehicles, driver-assistance availability, engagement, and takeover states.',
+    changed:
+      'Partial autonomy created a new interface problem: the person had to understand what the system perceived, what it controlled, and when to intervene.',
+    lineage:
+      'Driver assistance → Autosteer visualization → Navigate on Autopilot → FSD visualization',
+    impact:
+      'Autopilot made human-machine handoff one of the most visible and debated AI interface problems in consumer products.',
+    forms: ['Embodied', 'Vision'],
+    layers: ['Device', 'Embodied system'],
+    popularity: 89,
+    visual: 'vision',
+    accent: '#d13a35',
+    sources: [
+      {
+        label: 'Tesla Autopilot support',
+        url: 'https://www.tesla.com/support/autopilot',
+        kind: 'source',
+      },
+      {
+        label: 'Instrument panel owner’s manual',
+        url: 'https://www.tesla.com/ownersmanual/2015_2020_modelx/en_us/GUID-EE80FB8A-9118-47E6-A1C6-2EE080B92B18.html',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'tiktok-for-you-2018',
+    date: '2018-08-02',
+    year: 2018,
+    name: 'TikTok For You',
+    edition: 'The interest graph',
+    maker: 'TikTok',
+    description:
+      'An immediately personalized, full-screen video stream where watching, replaying, skipping, liking, and sharing continuously reshaped discovery.',
+    changed:
+      'The inferred interest graph replaced the social graph as the dominant home interface. A swipe became both navigation and training signal.',
+    lineage:
+      'Musical.ly + Douyin → unified TikTok feed → short-form recommendation interfaces across social media',
+    impact:
+      'TikTok reported one billion monthly users by 2021, and its full-screen recommendation feed was copied across the consumer internet.',
+    forms: ['Recommendation', 'Vision', 'Video'],
+    layers: ['Consumer product'],
+    popularity: 97,
+    visual: 'cards',
+    accent: '#fe2c55',
+    sources: [
+      {
+        label: 'The unified TikTok launch',
+        url: 'https://newsroom.tiktok.com/musical-ly-and/?lang=en',
+        kind: 'source',
+      },
+      {
+        label: 'How the For You feed recommends',
+        url: 'https://newsroom.tiktok.com/how-tiktok-recommends-videos-for-you?lang=en',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'waymo-one-2018',
+    date: '2018-12-05',
+    year: 2018,
+    name: 'Waymo One',
+    edition: 'Riding with no driver',
+    maker: 'Waymo',
+    description:
+      'A ride-hailing and in-car interface for finding, entering, understanding, and getting help inside a self-driving vehicle.',
+    changed:
+      'Autonomous driving became a service experience. The interface had to explain vehicle intent without the social cues of a human driver.',
+    lineage:
+      'Google self-driving project → early rider program → Waymo One → fully driverless public service',
+    impact:
+      'Waymo described it as the first public self-driving ride-hailing service and reported thousands of Phoenix-area riders after its first year.',
+    forms: ['Embodied', 'Vision', 'Agents'],
+    layers: ['Consumer product', 'Embodied system'],
+    popularity: 84,
+    visual: 'agent',
+    accent: '#1573e6',
+    sources: [
+      {
+        label: 'Waymo One launch',
+        url: 'https://waymo.com/blog/2018/12/waymo-one-next-step-on-our-self-driving/',
+        kind: 'source',
+      },
+      {
+        label: 'Waymo One’s first year',
+        url: 'https://waymo.com/blog/2019/12/waymo-one-year-of-firsts/',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'gpt3-playground-2020',
+    date: '2020-06-11',
+    year: 2020,
+    name: 'GPT-3 Playground',
+    edition: 'Prompt as programming',
+    maker: 'OpenAI',
+    description:
+      'A text-in, text-out workbench for writing prompts and examples, generating completions, and tuning model parameters.',
+    changed:
+      'Natural-language prompting became a visible developer primitive before chat emerged as the dominant LLM interface.',
+    lineage:
+      'GPT-2 demos → GPT-3 API Playground → InstructGPT → ChatGPT and model studios',
+    impact:
+      'The Playground established prompt design and few-shot examples as a practical way to program a general language model.',
+    forms: ['Chat', 'Code'],
+    layers: ['Developer tool'],
+    popularity: 82,
+    visual: 'code',
+    accent: '#10a37f',
+    sources: [
+      {
+        label: 'OpenAI API launch',
+        url: 'https://openai.com/index/openai-api/',
+        kind: 'source',
+      },
+      {
+        label: 'InstructGPT paper and Playground lineage',
+        url: 'https://cdn.openai.com/papers/Training_language_models_to_follow_instructions_with_human_feedback.pdf',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'stable-diffusion-2022',
+    date: '2022-08-22',
+    year: 2022,
+    name: 'Stable Diffusion',
+    edition: 'The interface becomes forkable',
+    maker: 'Stability AI',
+    description:
+      'An open image model paired with DreamStudio and a fast-growing ecosystem of local, community-built generation interfaces.',
+    changed:
+      'Users could leave the hosted prompt box, run models locally, and gain deep control through independently designed tools and node graphs.',
+    lineage:
+      'Diffusion research tools → DreamStudio → AUTOMATIC1111, ComfyUI, and open creative ecosystems',
+    impact:
+      'Stability reported more than 10 million users in two months, while the open release produced thousands of specialized interfaces.',
+    forms: ['Canvas', 'Vision'],
+    layers: ['Creative tool', 'Developer tool'],
+    popularity: 93,
+    visual: 'canvas',
+    accent: '#7f62d9',
+    sources: [
+      {
+        label: 'Stable Diffusion public release',
+        url: 'https://stability.ai/news-updates/stable-diffusion-public-release',
+        kind: 'source',
+      },
+      {
+        label: 'One-year retrospective',
+        url: 'https://stability.ai/news-updates/celebrating-one-year-of-stable-diffusion',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'character-ai-2022',
+    date: '2022-09-01',
+    datePrecision: 'month',
+    year: 2022,
+    name: 'Character.AI',
+    edition: 'A directory of personalities',
+    maker: 'Character.AI',
+    description:
+      'A social catalog where people chose or created a persona and entered an open-ended role-play conversation.',
+    changed:
+      'The character, rather than the general assistant, became the unit of interaction. Personality and fiction organized the product.',
+    lineage:
+      'Companion chatbots → Character.AI → custom assistants and character marketplaces',
+    impact:
+      'Its mobile app passed 1.7 million installs in its first week, proving substantial demand for personality-driven AI interaction.',
+    forms: ['Chat'],
+    layers: ['Consumer product'],
+    popularity: 89,
+    visual: 'chat',
+    accent: '#6f58d9',
+    sources: [
+      {
+        label: 'Introducing Character',
+        url: 'https://blog.character.ai/introducing-character/',
+        kind: 'source',
+      },
+      {
+        label: 'Character.AI mobile launch',
+        url: 'https://blog.character.ai/character-ai-launches-mobile-app-for-ios-and-android/',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'cursor-inline-2023',
+    date: '2023-07-03',
+    year: 2023,
+    name: 'Cursor Cmd+K',
+    edition: 'Edit by intent',
+    maker: 'Cursor',
+    description:
+      'An AI-native code editor where a developer selected code, stated an intent, inspected a diff, and applied a multi-line change in place.',
+    changed:
+      'AI code generation shifted from completing the next tokens to transforming an existing codebase through direct, reviewable edits.',
+    lineage:
+      'Copilot ghost text → inline intent edits → Composer → background coding agents',
+    impact:
+      'Cursor established the AI-native editor as a distinct product category rather than an assistant added to an existing IDE.',
+    forms: ['Code', 'Chat'],
+    layers: ['Developer tool'],
+    popularity: 92,
+    visual: 'code',
+    accent: '#faf7ee',
+    sources: [
+      {
+        label: 'Cursor 0.2.39 inline edits',
+        url: 'https://cursor.com/changelog/0-2-39',
+        kind: 'source',
+      },
+      {
+        label: 'Cursor’s 2023 product retrospective',
+        url: 'https://www.cursor.com/blog/problems-2023',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'v0-2023',
+    date: '2023-10-11',
+    year: 2023,
+    name: 'v0',
+    edition: 'Generative UI',
+    maker: 'Vercel',
+    description:
+      'A prompt-driven workspace that returned multiple functional interface variants, live previews, and usable React code.',
+    changed:
+      'The model’s answer became an interactive interface. Generation, selection, preview, iteration, and code export formed one loop.',
+    lineage: 'Text-to-code → generative UI variants → prompt-to-app builders',
+    impact:
+      'Vercel reported 100,000 waitlist registrations in three weeks and later more than four million generated designs.',
+    forms: ['Canvas', 'Code', 'Chat'],
+    layers: ['Creative tool', 'Developer tool'],
+    popularity: 87,
+    visual: 'canvas',
+    accent: '#111111',
+    sources: [
+      {
+        label: 'Announcing v0',
+        url: 'https://vercel.com/blog/announcing-v0-generative-ui',
+        kind: 'source',
+      },
+      {
+        label: 'v0 adoption and team plans',
+        url: 'https://vercel.com/blog/v0-plans-for-teams',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'gpt4o-2024',
+    date: '2024-05-13',
+    year: 2024,
+    name: 'GPT-4o Voice',
+    edition: 'Real-time multimodality',
+    maker: 'OpenAI',
+    description:
+      'A low-latency assistant interface that could speak expressively, accept interruptions, and reason across live audio and visual context.',
+    changed:
+      'Voice stopped behaving like speech-to-text wrapped around chat. Timing, tone, interruption, and camera context became part of the interaction.',
+    lineage:
+      'Turn-based voice chat → native multimodal model → real-time assistants',
+    impact:
+      'OpenAI reported average audio response latency of 320 milliseconds, close to ordinary human conversational timing.',
+    forms: ['Voice', 'Vision', 'Chat'],
+    layers: ['Assistant', 'Consumer product'],
+    popularity: 96,
+    visual: 'voice',
+    accent: '#4ec8ab',
+    sources: [
+      {
+        label: 'Hello GPT-4o',
+        url: 'https://openai.com/index/hello-gpt-4o/',
+        kind: 'source',
+      },
+      {
+        label: 'GPT-4o system card',
+        url: 'https://cdn.openai.com/gpt-4o-system-card.pdf',
+        kind: 'source',
+      },
+    ],
+  },
 ].sort((a, b) => a.date.localeCompare(b.date))
 
 export const interactionForms: Array<'All' | InteractionForm> = [
@@ -1303,4 +1659,5 @@ export const interactionForms: Array<'All' | InteractionForm> = [
   'Video',
   'Audio',
   'Embodied',
+  'Recommendation',
 ]
