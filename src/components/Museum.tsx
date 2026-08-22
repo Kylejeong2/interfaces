@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'motion/react'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArtifactVisual } from './ArtifactVisual'
+import { ConstellationTimeline } from './ConstellationTimeline'
 import type { Artifact } from '#/data/artifacts'
 import { artifacts } from '#/data/artifacts'
 
@@ -19,17 +20,6 @@ const formatMonth = new Intl.DateTimeFormat('en-US', {
 
 export function Museum() {
   const [activeArtifact, setActiveArtifact] = useState<Artifact | null>(null)
-
-  const years = useMemo(() => {
-    return artifacts.reduce<
-      Array<{ year: number; artifacts: Array<Artifact> }>
-    >((groups, artifact) => {
-      const current = groups.at(-1)
-      if (current?.year === artifact.year) current.artifacts.push(artifact)
-      else groups.push({ year: artifact.year, artifacts: [artifact] })
-      return groups
-    }, [])
-  }, [])
 
   useEffect(() => {
     if (!activeArtifact) return
@@ -54,7 +44,7 @@ export function Museum() {
   }, [activeArtifact])
 
   return (
-    <main className="museum-shell">
+    <main className="museum-shell museum-shell--constellation">
       <section className="hero" id="top">
         <p className="eyebrow">A living collection of machine interfaces</p>
         <h1>
@@ -73,38 +63,10 @@ export function Museum() {
       </section>
 
       <section className="collection" id="collection">
-        <div className="timeline">
-          {years.map((yearGroup) => (
-            <section
-              className="year-group"
-              key={yearGroup.year}
-              aria-labelledby={`year-${yearGroup.year}`}
-            >
-              <div className="year-marker">
-                <h2 id={`year-${yearGroup.year}`}>{yearGroup.year}</h2>
-              </div>
-              <div className="artifact-grid">
-                {yearGroup.artifacts.map((artifact) => (
-                  <motion.button
-                    className="artifact-card"
-                    key={artifact.id}
-                    onClick={() => setActiveArtifact(artifact)}
-                    type="button"
-                    layoutId={`card-${artifact.id}`}
-                    whileHover={{ y: -4 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <ArtifactVisual artifact={artifact} />
-                    <div className="card-caption">
-                      <h3>{artifact.name}</h3>
-                      <p>{artifact.edition}</p>
-                    </div>
-                  </motion.button>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
+        <ConstellationTimeline
+          artifacts={artifacts}
+          onSelect={setActiveArtifact}
+        />
       </section>
 
       <footer className="museum-footer">
