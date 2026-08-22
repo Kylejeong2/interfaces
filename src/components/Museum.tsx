@@ -55,17 +55,6 @@ export function Museum() {
 
   return (
     <main className="museum-shell">
-      <header className="museum-header">
-        <a
-          className="museum-wordmark"
-          href="#top"
-          aria-label="The AI Interface Museum home"
-        >
-          <span>AIM</span>
-        </a>
-        <span className="header-years">2011—2026</span>
-      </header>
-
       <section className="hero" id="top">
         <p className="eyebrow">A living collection of machine interfaces</p>
         <h1>

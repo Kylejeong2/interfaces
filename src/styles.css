@@ -43,37 +43,6 @@ button {
   background: var(--paper);
 }
 
-.museum-header {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 60px;
-  padding: 0 24px;
-  border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
-  backdrop-filter: blur(18px);
-}
-
-.museum-wordmark {
-  text-decoration: none;
-}
-.museum-wordmark span {
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-content: center;
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--paper);
-  font:
-    500 10px/1 'DM Mono',
-    monospace;
-  letter-spacing: -0.04em;
-}
-.header-years,
 .eyebrow,
 .detail-toolbar,
 .detail-section > span,
@@ -86,12 +55,8 @@ button {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.header-years {
-  color: var(--muted);
-}
-
 .hero {
-  min-height: calc(100svh - 60px);
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   padding: 28px 24px 24px;
@@ -1052,9 +1017,6 @@ button {
 }
 
 @media (max-width: 680px) {
-  .museum-header {
-    padding: 0 14px;
-  }
   .hero {
     min-height: 82svh;
     padding: 24px 14px 18px;
