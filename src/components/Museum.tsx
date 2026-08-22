@@ -75,13 +75,8 @@ export function Museum() {
           aria-label="The AI Interface Museum home"
         >
           <span>AIM</span>
-          <span>Archive № 001</span>
         </a>
-        <div className="header-meta">
-          <span>2011—2026</span>
-          <span>{artifacts.length} artifacts</span>
-          <span>Curated by Kyle Jeong</span>
-        </div>
+        <span className="header-years">2011—2026</span>
       </header>
 
       <section className="hero" id="top">
@@ -102,17 +97,6 @@ export function Museum() {
       </section>
 
       <section className="collection" id="collection">
-        <div className="collection-intro">
-          <p>Chronological index</p>
-          <p>
-            Selected for adoption, cultural impact, and the interaction they
-            made possible.
-          </p>
-          <p className="collection-count">
-            Showing {filteredArtifacts.length.toString().padStart(2, '0')}
-          </p>
-        </div>
-
         <nav className="filter-rail" aria-label="Filter by interaction form">
           {interactionForms.map((form) => (
             <button
@@ -143,14 +127,11 @@ export function Museum() {
             >
               <div className="year-marker">
                 <h2 id={`year-${yearGroup.year}`}>{yearGroup.year}</h2>
-                <span>
-                  {yearGroup.artifacts.length.toString().padStart(2, '0')}
-                </span>
               </div>
               <div className="artifact-grid">
                 {yearGroup.artifacts.map((artifact) => (
                   <motion.button
-                    className={`artifact-card ${artifact.popularity >= 94 ? 'artifact-card--major' : ''}`}
+                    className="artifact-card"
                     key={artifact.id}
                     onClick={() => setActiveArtifact(artifact)}
                     type="button"
@@ -158,24 +139,10 @@ export function Museum() {
                     whileHover={{ y: -4 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="card-index">
-                      <span>{formatCardDate(artifact)}</span>
-                      {artifact.popularity >= 93 && (
-                        <span className="landmark-label">Landmark</span>
-                      )}
-                    </div>
                     <ArtifactVisual artifact={artifact} />
                     <div className="card-caption">
-                      <div>
-                        <h3>{artifact.name}</h3>
-                        <p>{artifact.edition}</p>
-                      </div>
-                      <span className="open-mark">↗</span>
-                    </div>
-                    <div className="card-tags">
-                      {artifact.forms.slice(0, 3).map((form) => (
-                        <span key={form}>{form}</span>
-                      ))}
+                      <h3>{artifact.name}</h3>
+                      <p>{artifact.edition}</p>
                     </div>
                   </motion.button>
                 ))}
@@ -349,9 +316,4 @@ function formatArtifactDate(artifact: Artifact) {
   return artifact.datePrecision === 'month'
     ? formatMonth.format(date)
     : formatDate.format(date)
-}
-
-function formatCardDate(artifact: Artifact) {
-  const [month, day] = artifact.date.slice(5).split('-')
-  return artifact.datePrecision === 'month' ? `${month}.—` : `${month}.${day}`
 }

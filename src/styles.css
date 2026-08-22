@@ -47,8 +47,8 @@ button {
   position: sticky;
   top: 0;
   z-index: 30;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   min-height: 60px;
   padding: 0 24px;
@@ -58,12 +58,9 @@ button {
 }
 
 .museum-wordmark {
-  display: flex;
-  gap: 18px;
-  align-items: center;
   text-decoration: none;
 }
-.museum-wordmark span:first-child {
+.museum-wordmark span {
   width: 32px;
   height: 32px;
   display: grid;
@@ -76,13 +73,9 @@ button {
     monospace;
   letter-spacing: -0.04em;
 }
-.museum-wordmark span:last-child,
-.header-meta,
+.header-years,
 .eyebrow,
-.collection-intro,
 .filter-rail,
-.card-index,
-.card-tags,
 .detail-toolbar,
 .detail-section > span,
 .detail-taxonomy > span,
@@ -94,12 +87,8 @@ button {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.header-meta {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.header-meta span:last-child {
-  text-align: right;
+.header-years {
+  color: var(--muted);
 }
 
 .hero {
@@ -154,29 +143,7 @@ button {
 }
 
 .collection {
-  padding: 0 24px 140px;
-}
-.collection-intro {
-  display: grid;
-  grid-template-columns: 1fr 1.75fr 0.75fr;
-  min-height: 112px;
-  align-items: start;
-  padding-top: 18px;
-  border-bottom: 1px solid var(--line);
-}
-.collection-intro p {
-  margin: 0;
-  max-width: 410px;
-}
-.collection-intro p:nth-child(2) {
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  text-transform: none;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
-}
-.collection-count {
-  text-align: right;
+  padding: 0 0 140px;
 }
 
 .filter-rail {
@@ -185,7 +152,8 @@ button {
   z-index: 20;
   display: flex;
   gap: 7px;
-  padding: 12px 0;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--line);
   overflow-x: auto;
   background: color-mix(in srgb, var(--paper) 92%, transparent);
   backdrop-filter: blur(16px);
@@ -219,60 +187,60 @@ button {
 }
 
 .timeline {
+  display: flex;
+  padding-left: 24px;
+  overflow-x: auto;
   border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  scroll-snap-type: x proximity;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink) transparent;
+}
+.timeline::-webkit-scrollbar {
+  height: 8px;
+}
+.timeline::-webkit-scrollbar-thumb {
+  background: var(--ink);
 }
 .year-group {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  border-right: 1px solid var(--line);
+  scroll-snap-align: start;
 }
 .year-marker {
-  position: relative;
-  padding: 18px 18px 18px 0;
-  border-right: 1px solid var(--line);
+  display: flex;
+  height: 70px;
+  align-items: center;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--line);
 }
 .year-marker h2 {
-  position: sticky;
-  top: 126px;
   margin: 0;
   font-size: 28px;
   font-weight: 500;
   letter-spacing: -0.06em;
 }
-.year-marker span {
-  position: absolute;
-  right: 12px;
-  top: 24px;
-  font:
-    400 8px/1 'DM Mono',
-    monospace;
-  color: var(--muted);
-}
 .artifact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
 }
 
 .artifact-card {
   position: relative;
-  min-width: 0;
-  padding: 14px;
+  flex: 0 0 clamp(290px, 27vw, 410px);
+  width: clamp(290px, 27vw, 410px);
+  padding: 14px 14px 22px;
   border: 0;
   border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
   background: transparent;
   text-align: left;
   cursor: pointer;
   appearance: none;
 }
-.artifact-card:nth-child(3n) {
+.artifact-card:last-child {
   border-right: 0;
-}
-.artifact-card--major {
-  grid-column: span 2;
-}
-.artifact-card--major .artifact-visual {
-  aspect-ratio: 2.05 / 1;
 }
 .artifact-card::after {
   content: '';
@@ -286,16 +254,6 @@ button {
 .artifact-card:hover::after {
   opacity: 0.5;
 }
-.card-index {
-  height: 28px;
-  display: flex;
-  justify-content: space-between;
-  color: var(--muted);
-}
-.landmark-label {
-  color: var(--red);
-}
-
 .artifact-visual {
   --accent: #111;
   position: relative;
@@ -356,10 +314,7 @@ button {
 }
 
 .card-caption {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 13px 0 11px;
+  padding: 13px 0 0;
 }
 .card-caption h3 {
   margin: 0 0 2px;
@@ -372,25 +327,6 @@ button {
   margin: 0;
   color: var(--muted);
   font-size: 11px;
-}
-.open-mark {
-  font-size: 15px;
-  transition: transform 150ms ease;
-}
-.artifact-card:hover .open-mark {
-  transform: translate(3px, -3px);
-}
-.card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-.card-tags span {
-  padding: 4px 6px;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  color: var(--muted);
-  font-size: 7px;
 }
 
 /* Reconstructed interface studies */
@@ -1149,18 +1085,6 @@ button {
   .hero h1 {
     font-size: clamp(60px, 13vw, 118px);
   }
-  .artifact-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .artifact-card:nth-child(3n) {
-    border-right: 1px solid var(--line);
-  }
-  .artifact-card:nth-child(2n) {
-    border-right: 0;
-  }
-  .artifact-card--major {
-    grid-column: span 2;
-  }
   .detail-copy,
   .detail-footer {
     grid-template-columns: 1fr;
@@ -1170,16 +1094,7 @@ button {
 
 @media (max-width: 680px) {
   .museum-header {
-    grid-template-columns: 1fr auto;
     padding: 0 14px;
-  }
-  .museum-wordmark span:last-child,
-  .header-meta span:first-child,
-  .header-meta span:last-child {
-    display: none;
-  }
-  .header-meta {
-    display: block;
   }
   .hero {
     min-height: 82svh;
@@ -1207,43 +1122,25 @@ button {
     align-self: flex-end;
   }
   .collection {
-    padding: 0 14px 80px;
+    padding: 0 0 80px;
   }
-  .collection-intro {
-    grid-template-columns: 1fr auto;
-    min-height: 95px;
+  .filter-rail {
+    padding-inline: 14px;
   }
-  .collection-intro p:nth-child(2) {
-    display: none;
-  }
-  .year-group {
-    grid-template-columns: 55px 1fr;
+  .timeline {
+    padding-left: 14px;
   }
   .year-marker {
-    padding-right: 8px;
+    height: 58px;
+    padding-inline: 10px;
   }
   .year-marker h2 {
-    top: 122px;
-    font-size: 15px;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+    font-size: 22px;
   }
-  .year-marker span {
-    right: 6px;
-    top: 18px;
-  }
-  .artifact-grid {
-    grid-template-columns: 1fr;
-  }
-  .artifact-card,
-  .artifact-card:nth-child(2n),
-  .artifact-card:nth-child(3n) {
-    grid-column: span 1;
-    border-right: 0;
-    padding: 10px;
-  }
-  .artifact-card--major .artifact-visual {
-    aspect-ratio: 1.35 / 1;
+  .artifact-card {
+    flex-basis: 82vw;
+    width: 82vw;
+    padding: 10px 10px 18px;
   }
   .museum-footer {
     grid-template-columns: 1fr;
