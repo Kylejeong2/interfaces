@@ -6,4 +6,3 @@ export default defineConfig({
   resolve: { tsconfigPaths: true },
   plugins: [tanstackStart(), viteReact()],
 })
-
