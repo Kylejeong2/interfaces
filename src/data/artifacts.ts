@@ -119,7 +119,7 @@ export const artifacts: Array<Artifact> = [
       },
       {
         label: 'Google Now overview',
-        url: 'https://blog.google/products/search/google-now-gets-you-just-right-information-at-just-right-time/',
+        url: 'https://blog.google/products-and-platforms/platforms/android/android-io-playground-is-open/',
         kind: 'source',
       },
     ],
@@ -154,7 +154,7 @@ export const artifacts: Array<Artifact> = [
       },
       {
         label: 'Amazon Echo announcement',
-        url: 'https://www.aboutamazon.com/news/devices/amazon-echo',
+        url: 'https://www.aboutamazon.com/news/devices/seven-women-behind-alexa',
         kind: 'source',
       },
     ],
@@ -184,7 +184,7 @@ export const artifacts: Array<Artifact> = [
     sources: [
       {
         label: 'Introducing Google Photos',
-        url: 'https://blog.google/products/photos/introducing-google-photos/',
+        url: 'https://blog.google/products-and-platforms/products/photos/picture-this-fresh-approach-to-photos/',
         kind: 'source',
       },
       {
@@ -248,7 +248,7 @@ export const artifacts: Array<Artifact> = [
     sources: [
       {
         label: 'Google Assistant announcement',
-        url: 'https://blog.google/products/assistant/google-assistant-is-here/',
+        url: 'https://blog.google/products-and-platforms/products/assistant/io-building-next-evolution-of-google/',
         kind: 'source',
       },
       {
@@ -280,7 +280,7 @@ export const artifacts: Array<Artifact> = [
     sources: [
       {
         label: 'Google Lens introduction',
-        url: 'https://blog.google/products/photos/google-lens-real-world/',
+        url: 'https://blog.google/innovation-and-ai/products/making-ai-work-for-everyone/',
         kind: 'source',
       },
       {
@@ -497,13 +497,13 @@ export const artifacts: Array<Artifact> = [
     edition: 'Research preview',
     maker: 'OpenAI',
     description:
-      'A sparse chat page that made a powerful language model approachable through the most familiar conversational interface on the internet.',
+      'A sparse chat page that made an instruction-following language model approachable through the most familiar conversational interface on the internet.',
     changed:
       'Chat turned prompting into dialogue. Follow-ups, corrections, and examples allowed people to steer the model without learning a specialized tool.',
     lineage:
       'Chatbots → instruction-tuned LLMs → general assistant → multimodal workspace',
     impact:
-      'ChatGPT reached mass adoption at unprecedented speed and reset expectations for how software could be operated.',
+      'ChatGPT passed one million registered users in five days and reset expectations for how software could be operated.',
     forms: ['Chat'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 100,
@@ -743,7 +743,7 @@ export const artifacts: Array<Artifact> = [
     sources: [
       {
         label: 'Introducing Artifacts',
-        url: 'https://www.anthropic.com/news/artifacts',
+        url: 'https://www.anthropic.com/news/projects',
         kind: 'source',
       },
       {

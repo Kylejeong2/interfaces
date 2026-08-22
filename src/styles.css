@@ -14,7 +14,7 @@
   --ink: #11110f;
   --line: rgba(17, 17, 15, 0.2);
   --muted: #6a6963;
-  --red: #ee3d26;
+  --red: #b83220;
 }
 
 * {
@@ -196,6 +196,7 @@ button {
 }
 .filter-rail button {
   flex: 0 0 auto;
+  min-height: 44px;
   padding: 9px 13px;
   border: 1px solid var(--line);
   border-radius: 30px;
@@ -337,7 +338,7 @@ button {
   font:
     500 6px/1 'DM Mono',
     monospace;
-  opacity: 0.48;
+  color: #62615f;
 }
 .reconstruction-label {
   position: absolute;
@@ -443,7 +444,7 @@ button {
   padding: 5% 6%;
   border: 1px solid #d2d0ca;
   border-radius: 20px;
-  color: #aaa;
+  color: #686868;
   font-size: 6px;
 }
 .composer span {
@@ -645,7 +646,7 @@ button {
   border-radius: 15px;
   background: #fff;
   font-size: 6px;
-  color: #777;
+  color: #686868;
 }
 .vision-query b {
   float: right;
@@ -760,7 +761,7 @@ button {
   position: absolute;
   right: 5px;
   top: 4px;
-  color: var(--accent);
+  color: #f1f0ed;
   font: 500 5px/1 'DM Mono';
 }
 .code-suggestion i {
@@ -781,14 +782,14 @@ button {
   border: 1px solid #d2d0ca;
   border-radius: 19px;
   font-size: 6px;
-  color: #777;
+  color: #686868;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 .search-input span {
   float: right;
   opacity: 0.55;
 }
-.search-ui h4 {
+.search-heading {
   margin: 10% 0 5%;
   font-size: clamp(8px, 1vw, 13px);
   font-weight: 500;
@@ -856,7 +857,7 @@ button {
 }
 .browser-bar span {
   font: 400 4px/1 'DM Mono';
-  color: #888;
+  color: #60605e;
 }
 .browser-page {
   position: relative;
@@ -904,7 +905,7 @@ button {
   font-size: 6px;
 }
 .agent-trace small {
-  color: #999;
+  color: #60605e;
   font-size: 4px;
 }
 
@@ -953,6 +954,7 @@ button {
 }
 .artifact-detail {
   width: min(1180px, 100%);
+  max-width: calc(100vw - 36px);
   min-height: calc(100svh - 36px);
   margin: 0 auto;
   border-radius: 5px;
@@ -976,6 +978,7 @@ button {
 .detail-toolbar > div:first-child {
   display: flex;
   gap: 20px;
+  min-width: 0;
 }
 .detail-toolbar span {
   color: var(--muted);
@@ -986,10 +989,11 @@ button {
 .detail-controls {
   display: flex;
   gap: 5px;
+  flex-shrink: 0;
 }
 .detail-controls button {
   min-width: 36px;
-  height: 32px;
+  height: 44px;
   padding: 0 11px;
   border: 1px solid var(--line);
   border-radius: 20px;
@@ -1254,6 +1258,7 @@ button {
   }
   .artifact-detail {
     min-height: 100svh;
+    max-width: 100vw;
     border-radius: 0;
   }
   .detail-toolbar {

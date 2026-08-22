@@ -113,6 +113,7 @@ export function Museum() {
               key={form}
               className={activeForm === form ? 'is-active' : ''}
               onClick={() => setActiveForm(form)}
+              aria-pressed={activeForm === form}
               type="button"
             >
               {form}
@@ -249,6 +250,7 @@ function ArtifactDetail({
         className="artifact-detail"
         layoutId={`card-${artifact.id}`}
         onMouseDown={(event) => event.stopPropagation()}
+        onClick={(event) => event.stopPropagation()}
         role="dialog"
         aria-modal="true"
         aria-labelledby="artifact-title"

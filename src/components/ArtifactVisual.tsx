@@ -134,7 +134,7 @@ function VisualBody({ artifact }: { artifact: Artifact }) {
           <div className="search-input">
             Ask anything <span>⌘ ↵</span>
           </div>
-          <h4>Here’s what I found</h4>
+          <div className="search-heading">Here’s what I found</div>
           <p>
             <b>1</b> Intelligence becomes easier to inspect when the answer
             carries its sources.
