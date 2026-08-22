@@ -1,0 +1,30 @@
+:root {
+  color: #111;
+  background: #f2f0eb;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+}
+
+h1 {
+  margin: 0;
+  max-width: 10ch;
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 500;
+  letter-spacing: -0.08em;
+  line-height: 0.85;
+}
+
