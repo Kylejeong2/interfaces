@@ -1644,20 +1644,3 @@ export const artifacts: Array<Artifact> = [
     ],
   },
 ].sort((a, b) => a.date.localeCompare(b.date))
-
-export const interactionForms: Array<'All' | InteractionForm> = [
-  'All',
-  'Chat',
-  'Voice',
-  'Vision',
-  'Canvas',
-  'Code',
-  'Search',
-  'Agents',
-  'Computer use',
-  'Ambient',
-  'Video',
-  'Audio',
-  'Embodied',
-  'Recommendation',
-]

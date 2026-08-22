@@ -75,7 +75,6 @@ button {
 }
 .header-years,
 .eyebrow,
-.filter-rail,
 .detail-toolbar,
 .detail-section > span,
 .detail-taxonomy > span,
@@ -144,46 +143,6 @@ button {
 
 .collection {
   padding: 0 0 140px;
-}
-
-.filter-rail {
-  position: sticky;
-  top: 60px;
-  z-index: 20;
-  display: flex;
-  gap: 7px;
-  padding: 12px 24px;
-  border-bottom: 1px solid var(--line);
-  overflow-x: auto;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  backdrop-filter: blur(16px);
-  scrollbar-width: none;
-}
-.filter-rail::-webkit-scrollbar {
-  display: none;
-}
-.filter-rail button {
-  flex: 0 0 auto;
-  min-height: 44px;
-  padding: 9px 13px;
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  background: transparent;
-  cursor: pointer;
-  transition:
-    background 150ms ease,
-    color 150ms ease;
-}
-.filter-rail button:hover,
-.filter-rail button.is-active {
-  background: var(--ink);
-  color: var(--paper);
-}
-.filter-rail sup {
-  margin-left: 8px;
-  font-size: 7px;
-  vertical-align: top;
-  opacity: 0.65;
 }
 
 .timeline {
@@ -1123,9 +1082,6 @@ button {
   }
   .collection {
     padding: 0 0 80px;
-  }
-  .filter-rail {
-    padding-inline: 14px;
   }
   .timeline {
     padding-left: 14px;

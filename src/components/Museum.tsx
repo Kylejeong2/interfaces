@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from 'motion/react'
 import { useEffect, useMemo, useState } from 'react'
 import { ArtifactVisual } from './ArtifactVisual'
-import type { Artifact, InteractionForm } from '#/data/artifacts'
-import { artifacts, interactionForms } from '#/data/artifacts'
+import type { Artifact } from '#/data/artifacts'
+import { artifacts } from '#/data/artifacts'
 
 const formatDate = new Intl.DateTimeFormat('en-US', {
   month: 'long',
@@ -19,19 +19,9 @@ const formatMonth = new Intl.DateTimeFormat('en-US', {
 
 export function Museum() {
   const [activeArtifact, setActiveArtifact] = useState<Artifact | null>(null)
-  const [activeForm, setActiveForm] = useState<'All' | InteractionForm>('All')
-
-  const filteredArtifacts = useMemo(
-    () =>
-      artifacts.filter(
-        (artifact) =>
-          activeForm === 'All' || artifact.forms.includes(activeForm),
-      ),
-    [activeForm],
-  )
 
   const years = useMemo(() => {
-    return filteredArtifacts.reduce<
+    return artifacts.reduce<
       Array<{ year: number; artifacts: Array<Artifact> }>
     >((groups, artifact) => {
       const current = groups.at(-1)
@@ -39,22 +29,19 @@ export function Museum() {
       else groups.push({ year: artifact.year, artifacts: [artifact] })
       return groups
     }, [])
-  }, [filteredArtifacts])
+  }, [])
 
   useEffect(() => {
     if (!activeArtifact) return
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setActiveArtifact(null)
       if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
-        const index = filteredArtifacts.findIndex(
+        const index = artifacts.findIndex(
           (artifact) => artifact.id === activeArtifact.id,
         )
         const offset = event.key === 'ArrowRight' ? 1 : -1
         const next =
-          filteredArtifacts[
-            (index + offset + filteredArtifacts.length) %
-              filteredArtifacts.length
-          ]
+          artifacts[(index + offset + artifacts.length) % artifacts.length]
         setActiveArtifact(next)
       }
     }
@@ -64,7 +51,7 @@ export function Museum() {
       document.body.classList.remove('modal-open')
       window.removeEventListener('keydown', onKeyDown)
     }
-  }, [activeArtifact, filteredArtifacts])
+  }, [activeArtifact])
 
   return (
     <main className="museum-shell">
@@ -97,27 +84,6 @@ export function Museum() {
       </section>
 
       <section className="collection" id="collection">
-        <nav className="filter-rail" aria-label="Filter by interaction form">
-          {interactionForms.map((form) => (
-            <button
-              key={form}
-              className={activeForm === form ? 'is-active' : ''}
-              onClick={() => setActiveForm(form)}
-              aria-pressed={activeForm === form}
-              type="button"
-            >
-              {form}
-              <sup>
-                {form === 'All'
-                  ? artifacts.length
-                  : artifacts.filter((artifact) =>
-                      artifact.forms.includes(form),
-                    ).length}
-              </sup>
-            </button>
-          ))}
-        </nav>
-
         <div className="timeline">
           {years.map((yearGroup) => (
             <section
@@ -184,14 +150,10 @@ export function Museum() {
             artifact={activeArtifact}
             onClose={() => setActiveArtifact(null)}
             onPrevious={() =>
-              setActiveArtifact(
-                getAdjacent(filteredArtifacts, activeArtifact, -1),
-              )
+              setActiveArtifact(getAdjacent(artifacts, activeArtifact, -1))
             }
             onNext={() =>
-              setActiveArtifact(
-                getAdjacent(filteredArtifacts, activeArtifact, 1),
-              )
+              setActiveArtifact(getAdjacent(artifacts, activeArtifact, 1))
             }
           />
         )}
