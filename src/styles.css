@@ -96,6 +96,7 @@ button {
 .eyebrow {
   margin: 0;
   color: var(--red);
+  text-transform: none;
 }
 .hero h1 {
   margin: auto 0;
