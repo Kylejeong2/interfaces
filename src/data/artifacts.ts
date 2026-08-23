@@ -1427,6 +1427,52 @@ export const artifacts: Array<Artifact> = [
     ],
   },
   {
+    id: 'poke-2026',
+    date: '2026-03-19',
+    year: 2026,
+    name: 'Poke',
+    edition: 'Agent in your texts',
+    maker: 'The Interaction Company of California',
+    description:
+      'A proactive personal agent inside familiar message threads that handled email, calendars, reminders, web tasks, and recurring automations without a separate app.',
+    changed:
+      'Poke treated the contact list as the AI launcher. Requests, approvals, follow-ups, and proactive notifications arrived through the same thread people already used for friends.',
+    lineage:
+      'Messaging bots → email assistant → proactive messaging agent → agent as a contact',
+    impact:
+      'People exchanged more than 100 million messages with Poke in three months, and Cognition reported that hundreds of thousands of people used it.',
+    forms: ['Chat', 'Agents', 'Ambient'],
+    layers: ['Assistant', 'Consumer product'],
+    popularity: 86,
+    visual: 'chat',
+    accent: '#55a6a2',
+    imageUrl: '/artifacts/poke-2026.jpg',
+    imageAlt:
+      'Poke conversation in Apple Messages asking the agent to check a traveler into a flight',
+    sources: [
+      {
+        label: 'Poke general availability and Recipes launch',
+        url: 'https://poke.com/docs/release-notes',
+        kind: 'source',
+      },
+      {
+        label: 'Watch the Poke launch film',
+        url: 'https://x.com/interaction/status/2034713714415608123',
+        kind: 'watch',
+      },
+      {
+        label: 'Poke product documentation',
+        url: 'https://poke.com/docs',
+        kind: 'source',
+      },
+      {
+        label: 'Poke adoption and Cognition announcement',
+        url: 'https://cognition.com/blog/interaction',
+        kind: 'source',
+      },
+    ],
+  },
+  {
     id: 'spotify-discover-weekly-2015',
     date: '2015-07-01',
     datePrecision: 'month',
