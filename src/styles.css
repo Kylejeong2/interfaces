@@ -76,15 +76,22 @@ button {
 
 .eyebrow,
 .detail-toolbar,
-.detail-section > span,
-.detail-taxonomy > span,
-.source-list > span,
 .reconstruction-label {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
   line-height: 1.2;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+.detail-section > span,
+.detail-taxonomy > span,
+.source-list > span {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  text-transform: none;
 }
 .hero {
   min-height: 100svh;
@@ -1145,12 +1152,6 @@ button {
   font-size: 15px;
   line-height: 1.5;
 }
-.detail-section .lineage {
-  font-family: 'DM Mono';
-  font-size: 11px;
-  text-transform: uppercase;
-  line-height: 1.65;
-}
 .detail-footer {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -1191,8 +1192,10 @@ button {
   color: var(--red);
 }
 .source-list em {
-  font: 400 8px/1 'DM Mono';
-  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1;
   font-style: normal;
   color: var(--muted);
 }
