@@ -16,6 +16,8 @@ export function ArtifactVisual({
         <img
           src={artifact.imageUrl}
           alt={artifact.imageAlt ?? `${artifact.name} interface`}
+          loading={expanded ? 'eager' : 'lazy'}
+          decoding="async"
         />
       </div>
     )

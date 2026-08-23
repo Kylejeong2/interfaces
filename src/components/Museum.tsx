@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'motion/react'
+import { AnimatePresence, LazyMotion, m } from 'motion/react'
 import { useEffect, useState } from 'react'
 import { ArtifactSearch } from './ArtifactSearch'
 import { ArtifactVisual } from './ArtifactVisual'
@@ -18,6 +18,9 @@ const formatMonth = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
   timeZone: 'UTC',
 })
+
+const loadMotionFeatures = () =>
+  import('../motion-features').then((module) => module.default)
 
 export function Museum() {
   const [activeArtifact, setActiveArtifact] = useState<Artifact | null>(null)
@@ -60,70 +63,72 @@ export function Museum() {
   }, [activeArtifact, searchOpen])
 
   return (
-    <main className="museum-shell museum-shell--constellation">
-      <section className="hero" id="top">
-        <button
-          className="search-trigger"
-          type="button"
-          onMouseDown={(event) => {
-            event.preventDefault()
-            setSearchOpen(true)
-          }}
-          onClick={() => setSearchOpen(true)}
-          aria-label="Search interfaces"
-        >
-          <span>Search interfaces</span>
-          <kbd>⌘K</kbd>
-        </button>
-        <p className="eyebrow">A living collection of machine interfaces</p>
-        <h1>
-          <span>The AI</span>
-          <span>Interface Museum</span>
-        </h1>
-        <div className="hero-footer">
-          <p className="hero-thesis">
-            A visual history of how humans learned to talk to, look through,
-            create with, and delegate work to artificial intelligence.
-          </p>
-          <a href="#collection" className="explore-link">
-            Explore the collection <span>↓</span>
-          </a>
-        </div>
-      </section>
-
-      <section className="collection" id="collection">
-        <ConstellationTimeline
-          artifacts={artifacts}
-          onSelect={setActiveArtifact}
-        />
-      </section>
-
-      <footer className="museum-footer">
-        <p>
-          Built by Kyle Jeong
-          <br />© 2026
-        </p>
-      </footer>
-
-      <AnimatePresence>
-        {activeArtifact && (
-          <ArtifactDetail
-            artifact={activeArtifact}
-            onClose={() => setActiveArtifact(null)}
-          />
-        )}
-        {searchOpen && (
-          <ArtifactSearch
-            artifacts={artifacts}
-            onClose={() => setSearchOpen(false)}
-            onSelect={(artifact) => {
-              setActiveArtifact(artifact)
-              setSearchOpen(false)
+    <LazyMotion features={loadMotionFeatures} strict>
+      <main className="museum-shell museum-shell--constellation">
+        <section className="hero" id="top">
+          <button
+            className="search-trigger"
+            type="button"
+            onMouseDown={(event) => {
+              event.preventDefault()
+              setSearchOpen(true)
             }}
+            onClick={() => setSearchOpen(true)}
+            aria-label="Search interfaces"
+          >
+            <span>Search interfaces</span>
+            <kbd>⌘K</kbd>
+          </button>
+          <p className="eyebrow">A living collection of machine interfaces</p>
+          <h1>
+            <span>The AI</span>
+            <span>Interface Museum</span>
+          </h1>
+          <div className="hero-footer">
+            <p className="hero-thesis">
+              A visual history of how humans learned to talk to, look through,
+              create with, and delegate work to artificial intelligence.
+            </p>
+            <a href="#collection" className="explore-link">
+              Explore the collection <span>↓</span>
+            </a>
+          </div>
+        </section>
+
+        <section className="collection" id="collection">
+          <ConstellationTimeline
+            artifacts={artifacts}
+            onSelect={setActiveArtifact}
           />
-        )}
-      </AnimatePresence>
-    </main>
+        </section>
+
+        <footer className="museum-footer">
+          <p>
+            Built by Kyle Jeong
+            <br />© 2026
+          </p>
+        </footer>
+
+        <AnimatePresence>
+          {activeArtifact && (
+            <ArtifactDetail
+              artifact={activeArtifact}
+              onClose={() => setActiveArtifact(null)}
+            />
+          )}
+          {searchOpen && (
+            <ArtifactSearch
+              artifacts={artifacts}
+              onClose={() => setSearchOpen(false)}
+              onSelect={(artifact) => {
+                setActiveArtifact(artifact)
+                setSearchOpen(false)
+              }}
+            />
+          )}
+        </AnimatePresence>
+      </main>
+    </LazyMotion>
   )
 }
 
@@ -135,14 +140,14 @@ function ArtifactDetail({
   onClose: () => void
 }) {
   return (
-    <motion.div
+    <m.div
       className="detail-backdrop"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onMouseDown={onClose}
     >
-      <motion.article
+      <m.article
         className="artifact-detail"
         layoutId={`card-${artifact.id}`}
         onMouseDown={(event) => event.stopPropagation()}
@@ -213,8 +218,8 @@ function ArtifactDetail({
             ))}
           </div>
         </div>
-      </motion.article>
-    </motion.div>
+      </m.article>
+    </m.div>
   )
 }
 

@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ChangeEvent, KeyboardEvent, MouseEvent } from 'react'
 import type { Artifact } from '#/data/artifacts'
@@ -15,6 +15,8 @@ const resultDate = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
   timeZone: 'UTC',
 })
+
+const stopPropagation = (event: MouseEvent) => event.stopPropagation()
 
 export function ArtifactSearch({
   artifacts,
@@ -69,10 +71,8 @@ export function ArtifactSearch({
     }
   }
 
-  const stopPropagation = (event: MouseEvent) => event.stopPropagation()
-
   return (
-    <motion.div
+    <m.div
       className="search-backdrop"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -80,7 +80,7 @@ export function ArtifactSearch({
       onMouseDown={onClose}
       onKeyDown={handleKeyDown}
     >
-      <motion.section
+      <m.section
         className="search-palette"
         initial={{ opacity: 0, y: -18, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -176,7 +176,7 @@ export function ArtifactSearch({
             <kbd>↵</kbd> Open
           </span>
         </div>
-      </motion.section>
-    </motion.div>
+      </m.section>
+    </m.div>
   )
 }

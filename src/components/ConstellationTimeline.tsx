@@ -1,5 +1,5 @@
 import {
-  motion,
+  m,
   useReducedMotion,
   useScroll,
   useSpring,
@@ -53,7 +53,6 @@ export function ConstellationTimeline({
     mass: 0.5,
   })
   const trackX = useTransform(progress, [0, 1], [0, -scrollDistance])
-  const atmosphereX = useTransform(progress, [0, 1], ['0%', '-18%'])
 
   useLayoutEffect(() => {
     const viewport = viewportRef.current
@@ -138,12 +137,8 @@ export function ConstellationTimeline({
         aria-label="AI interface chronology"
         tabIndex={0}
       >
-        <motion.div
-          className="constellation-atmosphere"
-          style={reduceMotion ? undefined : { x: atmosphereX }}
-          aria-hidden="true"
-        />
-        <motion.div
+        <div className="constellation-atmosphere" aria-hidden="true" />
+        <m.div
           ref={trackRef}
           className="constellation-track"
           style={
@@ -153,7 +148,7 @@ export function ConstellationTimeline({
             } as CSSProperties
           }
         >
-          <motion.div
+          <m.div
             className="constellation-axis"
             initial={reduceMotion ? false : { scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -161,12 +156,12 @@ export function ConstellationTimeline({
             transition={{ duration: 1.15, ease: [0.16, 1, 0.3, 1] }}
             aria-hidden="true"
           >
-            <motion.span
+            <m.span
               className="constellation-progress"
               style={{ scaleX: progress }}
             />
             <span className="constellation-pulse" />
-          </motion.div>
+          </m.div>
 
           {orderedArtifacts.map((artifact, index) => {
             const side = index % 2 === 0 ? 'above' : 'below'
@@ -181,7 +176,7 @@ export function ConstellationTimeline({
                 style={{ '--accent': artifact.accent } as CSSProperties}
               >
                 {startsYear && (
-                  <motion.span
+                  <m.span
                     className="constellation-year"
                     initial={
                       reduceMotion
@@ -194,11 +189,11 @@ export function ConstellationTimeline({
                     aria-hidden="true"
                   >
                     {artifact.year}
-                  </motion.span>
+                  </m.span>
                 )}
                 <span className="constellation-stem" aria-hidden="true" />
                 <span className="constellation-dot" aria-hidden="true" />
-                <motion.button
+                <m.button
                   ref={(node) => {
                     nodeRefs.current[index] = node
                   }}
@@ -213,7 +208,6 @@ export function ConstellationTimeline({
                           opacity: 0,
                           y: side === 'above' ? 74 : -74,
                           rotateZ: side === 'above' ? -4 : 4,
-                          filter: 'blur(14px)',
                           scale: 0.58,
                         }
                   }
@@ -221,7 +215,6 @@ export function ConstellationTimeline({
                     opacity: 1,
                     y: 0,
                     rotateZ: side === 'above' ? -1.2 : 1.2,
-                    filter: 'blur(0px)',
                     scale: 1,
                   }}
                   viewport={{ root: viewportRef, once: true, amount: 0.25 }}
@@ -248,11 +241,11 @@ export function ConstellationTimeline({
                     <strong>{artifact.name}</strong>
                     <small>{artifact.edition}</small>
                   </span>
-                </motion.button>
+                </m.button>
               </div>
             )
           })}
-        </motion.div>
+        </m.div>
       </div>
     </div>
   )
