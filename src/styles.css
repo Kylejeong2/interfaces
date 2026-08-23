@@ -1053,7 +1053,6 @@ button {
 }
 .detail-controls {
   display: flex;
-  gap: 5px;
   flex-shrink: 0;
 }
 .detail-controls button {
@@ -1068,9 +1067,6 @@ button {
 .detail-controls button:hover {
   background: var(--ink);
   color: var(--paper);
-}
-.detail-controls button:last-child {
-  margin-left: 7px;
 }
 .detail-controls button span {
   margin-left: 6px;
@@ -1278,9 +1274,6 @@ button {
   .detail-toolbar {
     top: 0;
     padding: 0 10px;
-  }
-  .detail-controls button:nth-child(-n + 2) {
-    display: none;
   }
   .detail-visual-wrap {
     padding: 10px;

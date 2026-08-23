@@ -81,12 +81,6 @@ export function Museum() {
           <ArtifactDetail
             artifact={activeArtifact}
             onClose={() => setActiveArtifact(null)}
-            onPrevious={() =>
-              setActiveArtifact(getAdjacent(artifacts, activeArtifact, -1))
-            }
-            onNext={() =>
-              setActiveArtifact(getAdjacent(artifacts, activeArtifact, 1))
-            }
           />
         )}
       </AnimatePresence>
@@ -97,13 +91,9 @@ export function Museum() {
 function ArtifactDetail({
   artifact,
   onClose,
-  onPrevious,
-  onNext,
 }: {
   artifact: Artifact
   onClose: () => void
-  onPrevious: () => void
-  onNext: () => void
 }) {
   return (
     <motion.div
@@ -129,16 +119,6 @@ function ArtifactDetail({
             </strong>
           </div>
           <div className="detail-controls">
-            <button
-              onClick={onPrevious}
-              type="button"
-              aria-label="Previous artifact"
-            >
-              ←
-            </button>
-            <button onClick={onNext} type="button" aria-label="Next artifact">
-              →
-            </button>
             <button onClick={onClose} type="button" aria-label="Close artifact">
               Close <span>×</span>
             </button>
@@ -197,11 +177,6 @@ function ArtifactDetail({
       </motion.article>
     </motion.div>
   )
-}
-
-function getAdjacent(items: Array<Artifact>, active: Artifact, offset: number) {
-  const index = items.findIndex((artifact) => artifact.id === active.id)
-  return items[(index + offset + items.length) % items.length] ?? active
 }
 
 function formatArtifactDate(artifact: Artifact) {
