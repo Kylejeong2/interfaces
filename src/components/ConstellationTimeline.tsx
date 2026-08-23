@@ -1,12 +1,11 @@
 import {
   motion,
-  useMotionValueEvent,
   useReducedMotion,
   useScroll,
   useSpring,
   useTransform,
 } from 'motion/react'
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { ArtifactVisual } from './ArtifactVisual'
 import type { CSSProperties, KeyboardEvent } from 'react'
 import type { Artifact } from '#/data/artifacts'
@@ -37,7 +36,6 @@ export function ConstellationTimeline({
   const viewportRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
   const nodeRefs = useRef<Array<HTMLButtonElement | null>>([])
-  const syncingFromVertical = useRef(false)
   const [focusIndex, setFocusIndex] = useState(0)
   const [scrollDistance, setScrollDistance] = useState(0)
   const reduceMotion = useReducedMotion()
@@ -54,20 +52,8 @@ export function ConstellationTimeline({
     damping: 19,
     mass: 0.5,
   })
+  const trackX = useTransform(progress, [0, 1], [0, -scrollDistance])
   const atmosphereX = useTransform(progress, [0, 1], ['0%', '-18%'])
-
-  useMotionValueEvent(scrollYProgress, 'change', (value) => {
-    const viewport = viewportRef.current
-    if (!viewport || scrollDistance === 0) return
-
-    const nextScrollLeft = value * scrollDistance
-    if (Math.abs(viewport.scrollLeft - nextScrollLeft) < 1) return
-    syncingFromVertical.current = true
-    viewport.scrollLeft = nextScrollLeft
-    requestAnimationFrame(() => {
-      syncingFromVertical.current = false
-    })
-  })
 
   useLayoutEffect(() => {
     const viewport = viewportRef.current
@@ -84,27 +70,6 @@ export function ConstellationTimeline({
 
     return () => observer.disconnect()
   }, [orderedArtifacts.length])
-
-  useEffect(() => {
-    const viewport = viewportRef.current
-    const section = scrollSectionRef.current
-    if (!viewport || !section) return
-
-    const syncVerticalPosition = () => {
-      if (syncingFromVertical.current || scrollDistance === 0) return
-      const sectionTop = section.getBoundingClientRect().top + window.scrollY
-      const verticalTravel = section.offsetHeight - window.innerHeight
-      const horizontalProgress = viewport.scrollLeft / scrollDistance
-      const nextScrollY = sectionTop + verticalTravel * horizontalProgress
-      if (Math.abs(window.scrollY - nextScrollY) < 1) return
-      window.scrollTo({ top: nextScrollY, behavior: 'auto' })
-    }
-
-    viewport.addEventListener('scroll', syncVerticalPosition, {
-      passive: true,
-    })
-    return () => viewport.removeEventListener('scroll', syncVerticalPosition)
-  }, [scrollDistance])
 
   const moveFocus = (index: number) => {
     const nextIndex = Math.max(0, Math.min(index, orderedArtifacts.length - 1))
@@ -181,7 +146,12 @@ export function ConstellationTimeline({
         <motion.div
           ref={trackRef}
           className="constellation-track"
-          style={{ '--node-count': orderedArtifacts.length } as CSSProperties}
+          style={
+            {
+              '--node-count': orderedArtifacts.length,
+              x: trackX,
+            } as CSSProperties
+          }
         >
           <motion.div
             className="constellation-axis"

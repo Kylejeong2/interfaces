@@ -152,8 +152,7 @@ button {
   top: 4svh;
   height: min(900px, 92svh);
   min-height: 700px;
-  overflow-x: auto;
-  overflow-y: clip;
+  overflow: clip;
   background:
     radial-gradient(
       circle at 50% 50%,
@@ -163,20 +162,11 @@ button {
     var(--paper);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  overscroll-behavior-inline: contain;
-  scrollbar-color: var(--ink) transparent;
-  scrollbar-width: thin;
   perspective: 1500px;
 }
 .constellation-timeline:focus-visible {
   outline: 2px solid var(--red);
   outline-offset: -2px;
-}
-.constellation-timeline::-webkit-scrollbar {
-  height: 8px;
-}
-.constellation-timeline::-webkit-scrollbar-thumb {
-  background: var(--ink);
 }
 .constellation-atmosphere {
   position: absolute;
