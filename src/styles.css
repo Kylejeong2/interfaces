@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 :root {
   color: #11110f;
@@ -88,11 +88,11 @@ button {
 .eyebrow,
 .detail-toolbar,
 .reconstruction-label {
-  font-family: 'DM Mono', monospace;
+  font-family: inherit;
   font-size: 10px;
   line-height: 1.2;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  text-transform: none;
 }
 .detail-section > span,
 .detail-taxonomy > span,
@@ -386,11 +386,12 @@ button {
   box-shadow: 0 4px 14px rgba(38, 35, 29, 0.1);
   backdrop-filter: blur(8px);
   color: var(--ink);
-  font:
-    500 8px/1 'DM Mono',
-    monospace;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: none;
 }
 .constellation-slot[data-side='above'] .constellation-date {
   top: auto;
@@ -502,9 +503,10 @@ button {
 .interface-chrome strong {
   margin-left: auto;
   margin-right: auto;
-  font:
-    500 6px/1 'DM Mono',
-    monospace;
+  font-family: inherit;
+  font-size: 6px;
+  font-weight: 500;
+  line-height: 1;
   color: #62615f;
 }
 .reconstruction-label {
@@ -532,7 +534,10 @@ button {
   border-radius: 5px;
   background: var(--accent);
   color: #fff;
-  font: 500 7px/1 'DM Mono';
+  font-family: inherit;
+  font-size: 7px;
+  font-weight: 500;
+  line-height: 1;
 }
 .message {
   max-width: 76%;
@@ -653,7 +658,10 @@ button {
 }
 .voice-ui p {
   margin: 0;
-  font: 400 6px/1 'DM Mono';
+  font-family: inherit;
+  font-size: 6px;
+  font-weight: 400;
+  line-height: 1;
   opacity: 0.6;
 }
 
@@ -767,7 +775,10 @@ button {
   bottom: -11px;
   padding: 2px 4px;
   background: white;
-  font: 500 5px/1 'DM Mono';
+  font-family: inherit;
+  font-size: 5px;
+  font-weight: 500;
+  line-height: 1;
 }
 .vision-query {
   margin-top: 5%;
@@ -891,7 +902,10 @@ button {
   right: 5px;
   top: 4px;
   color: #f1f0ed;
-  font: 500 5px/1 'DM Mono';
+  font-family: inherit;
+  font-size: 5px;
+  font-weight: 500;
+  line-height: 1;
 }
 .code-suggestion i {
   display: block;
@@ -954,7 +968,10 @@ button {
   height: 17px;
   border: 1px solid #ddd;
   border-radius: 3px;
-  font: 400 5px/1 'DM Mono';
+  font-family: inherit;
+  font-size: 5px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .agent-ui {
@@ -985,7 +1002,10 @@ button {
   background: var(--accent);
 }
 .browser-bar span {
-  font: 400 4px/1 'DM Mono';
+  font-family: inherit;
+  font-size: 4px;
+  font-weight: 400;
+  line-height: 1;
   color: #60605e;
 }
 .browser-page {
@@ -1050,8 +1070,11 @@ button {
 .museum-footer p {
   margin: 0;
   text-align: right;
-  font: 300 12px/1.5 'DM Mono';
-  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: none;
 }
 .museum-shell--constellation .museum-footer {
   background: #050608;
@@ -1336,7 +1359,10 @@ button {
 .detail-heading p {
   margin: 0 0 25px;
   color: var(--red);
-  font: 400 10px/1 'DM Mono';
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1;
   text-transform: none;
 }
 .detail-heading h2 {
