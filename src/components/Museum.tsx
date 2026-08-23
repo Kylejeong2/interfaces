@@ -124,7 +124,6 @@ function ArtifactDetail({
       >
         <div className="detail-toolbar">
           <div>
-            <span>Artifact</span>
             <strong>
               {artifact.year} / {artifact.name}
             </strong>

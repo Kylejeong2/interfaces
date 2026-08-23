@@ -1043,7 +1043,6 @@ button {
 }
 .detail-toolbar > div:first-child {
   display: flex;
-  gap: 20px;
   min-width: 0;
 }
 .detail-toolbar span {
@@ -1280,7 +1279,6 @@ button {
     top: 0;
     padding: 0 10px;
   }
-  .detail-toolbar > div:first-child span,
   .detail-controls button:nth-child(-n + 2) {
     display: none;
   }
