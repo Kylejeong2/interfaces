@@ -38,6 +38,7 @@ export function ConstellationTimeline({
   const nodeRefs = useRef<Array<HTMLButtonElement | null>>([])
   const [focusIndex, setFocusIndex] = useState(0)
   const [scrollDistance, setScrollDistance] = useState(0)
+  const [stackAbove, setStackAbove] = useState(false)
   const reduceMotion = useReducedMotion()
   const orderedArtifacts = useMemo(
     () => [...artifacts].sort((a, b) => a.date.localeCompare(b.date)),
@@ -61,13 +62,22 @@ export function ConstellationTimeline({
 
     const measure = () => {
       setScrollDistance(Math.max(0, track.scrollWidth - viewport.clientWidth))
+
+      const stickyTop = Number.parseFloat(getComputedStyle(viewport).top) || 0
+      setStackAbove(stickyTop + viewport.clientHeight > window.innerHeight + 1)
     }
     const observer = new ResizeObserver(measure)
     observer.observe(viewport)
     observer.observe(track)
+    window.addEventListener('resize', measure)
+    window.visualViewport?.addEventListener('resize', measure)
     measure()
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', measure)
+      window.visualViewport?.removeEventListener('resize', measure)
+    }
   }, [orderedArtifacts.length])
 
   const moveFocus = (index: number) => {
@@ -133,6 +143,7 @@ export function ConstellationTimeline({
       <div
         className="constellation-timeline"
         ref={viewportRef}
+        data-layout={stackAbove ? 'stacked-above' : 'alternating'}
         role="region"
         aria-label="AI interface chronology"
         tabIndex={0}
@@ -164,7 +175,11 @@ export function ConstellationTimeline({
           </m.div>
 
           {orderedArtifacts.map((artifact, index) => {
-            const side = index % 2 === 0 ? 'above' : 'below'
+            const side = stackAbove
+              ? 'above'
+              : index % 2 === 0
+                ? 'above'
+                : 'below'
             const startsYear =
               index === 0 || orderedArtifacts[index - 1]?.year !== artifact.year
 
