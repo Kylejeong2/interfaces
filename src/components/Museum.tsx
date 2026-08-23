@@ -72,7 +72,7 @@ export function Museum() {
           onClick={() => setSearchOpen(true)}
           aria-label="Search interfaces"
         >
-          <span>Search</span>
+          <span>Search interfaces</span>
           <kbd>⌘K</kbd>
         </button>
         <p className="eyebrow">A living collection of machine interfaces</p>
