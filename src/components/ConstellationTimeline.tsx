@@ -15,6 +15,19 @@ type ConstellationTimelineProps = {
   onSelect: (artifact: Artifact) => void
 }
 
+const shortDate = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC',
+})
+
+const shortMonth = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
+  year: 'numeric',
+  timeZone: 'UTC',
+})
+
 export function ConstellationTimeline({
   artifacts,
   onSelect,
@@ -176,6 +189,9 @@ export function ConstellationTimeline({
                 onKeyDown={(event) => onNodeKeyDown(event, index)}
                 onClick={() => onSelect(artifact)}
               >
+                <span className="constellation-date">
+                  {formatReleaseDate(artifact)}
+                </span>
                 <ArtifactVisual artifact={artifact} />
                 <span className="constellation-caption">
                   <strong>{artifact.name}</strong>
@@ -188,4 +204,11 @@ export function ConstellationTimeline({
       </div>
     </div>
   )
+}
+
+function formatReleaseDate(artifact: Artifact) {
+  const date = new Date(`${artifact.date}T00:00:00Z`)
+  return artifact.datePrecision === 'month'
+    ? shortMonth.format(date)
+    : shortDate.format(date)
 }

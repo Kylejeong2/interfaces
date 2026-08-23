@@ -322,6 +322,24 @@ button {
   outline: 2px solid var(--red);
   outline-offset: 4px;
 }
+.constellation-date {
+  position: absolute;
+  z-index: 3;
+  top: 15px;
+  right: 15px;
+  padding: 5px 7px;
+  border: 1px solid rgba(17, 17, 15, 0.16);
+  border-radius: 2px;
+  background: rgba(240, 238, 232, 0.9);
+  box-shadow: 0 4px 14px rgba(38, 35, 29, 0.1);
+  backdrop-filter: blur(8px);
+  color: var(--ink);
+  font:
+    500 8px/1 'DM Mono',
+    monospace;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
 .constellation-slot:has(.constellation-card:hover) .constellation-dot,
 .constellation-slot:has(.constellation-card:focus-visible) .constellation-dot {
   width: 17px;
