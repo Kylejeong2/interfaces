@@ -2,6 +2,7 @@
   "name": "ai-interface-museum",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.22.0",
   "imports": {
     "#/*": "./src/*"
   },
@@ -30,7 +31,7 @@
     "@vitejs/plugin-react": "latest",
     "eslint": "latest",
     "prettier": "latest",
-    "typescript": "latest",
+    "typescript": "^6.0.3",
     "vite": "latest"
   }
 }

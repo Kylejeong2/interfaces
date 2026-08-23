@@ -25,15 +25,15 @@ Graphic reconstructions are clearly labeled and fill gaps where a suitable archi
 The site is a single-route TanStack Start application.
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Before committing:
 
 ```bash
-npm run lint
-npm run build
+pnpm lint
+pnpm build
 ```
 
 Product names, marks, and archival imagery belong to their respective owners and are shown for historical and editorial reference.
