@@ -37,3 +37,5 @@ pnpm build
 ```
 
 Product names, marks, and archival imagery belong to their respective owners and are shown for historical and editorial reference.
+
+Want to propose another way humans interface with AI? Read [CONTRIBUTING.md](CONTRIBUTING.md).
