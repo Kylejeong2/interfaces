@@ -357,12 +357,10 @@ button {
   box-shadow:
     0 28px 70px rgba(38, 35, 29, 0.16),
     0 0 28px rgba(184, 50, 32, 0.04);
-  backdrop-filter: blur(18px);
   text-align: left;
   cursor: pointer;
   appearance: none;
   transform: translateX(-50%);
-  transform-style: preserve-3d;
 }
 .constellation-slot[data-side='above'] .constellation-card {
   bottom: calc(50% + var(--stem));
