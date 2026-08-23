@@ -1112,7 +1112,7 @@ button {
   margin: 0 0 25px;
   color: var(--red);
   font: 400 10px/1 'DM Mono';
-  text-transform: uppercase;
+  text-transform: none;
 }
 .detail-heading h2 {
   margin: 0;
