@@ -13,7 +13,9 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "check": "prettier --check . && eslint ."
+    "format:check": "prettier --check .",
+    "check": "pnpm format:check && pnpm lint",
+    "prepare": "husky"
   },
   "dependencies": {
     "@tanstack/react-router": "latest",
@@ -30,6 +32,7 @@
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "latest",
     "eslint": "latest",
+    "husky": "^9.1.7",
     "prettier": "latest",
     "typescript": "^6.0.3",
     "vite": "latest"

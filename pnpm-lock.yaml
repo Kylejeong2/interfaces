@@ -45,6 +45,9 @@ importers:
       eslint:
         specifier: latest
         version: 10.9.0(jiti@2.7.0)
+      husky:
+        specifier: ^9.1.7
+        version: 9.1.7
       prettier:
         specifier: latest
         version: 3.9.6
@@ -994,6 +997,11 @@ packages:
     peerDependenciesMeta:
       crossws:
         optional: true
+
+  husky@9.1.7:
+    resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
@@ -2505,6 +2513,8 @@ snapshots:
     dependencies:
       rou3: 0.8.1
       srvx: 0.11.22
+
+  husky@9.1.7: {}
 
   ignore@5.3.2: {}
 
