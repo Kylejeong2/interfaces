@@ -22,14 +22,6 @@ pnpm check
 pnpm build
 ```
 
-Profile the complete production timeline scroll with:
-
-```bash
-pnpm benchmark:timeline
-```
-
-See [Timeline performance](docs/timeline-performance.md) for the harness, current baseline, and optimization notes.
-
 The Husky pre-commit hook runs formatting and lint checks. If it fails, run `pnpm format`, review the resulting changes, and commit again.
 
 ## Contributing
