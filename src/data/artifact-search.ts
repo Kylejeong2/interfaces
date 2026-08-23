@@ -82,6 +82,16 @@ const artifactKeywords: Record<string, ReadonlyArray<string>> = {
   'claude-cowork-2026': ['Anthropic', 'desktop agent', 'knowledge work'],
   'figure-helix-2026': ['humanoid', 'whole body autonomy'],
   'codex-app-2026': ['multi agent', 'coding command center'],
+  'poke-2026': [
+    'Interaction Company',
+    'iMessage',
+    'Apple Messages',
+    'SMS agent',
+    'personal agent',
+    'proactive assistant',
+    'recipes',
+    'texting',
+  ],
 }
 
 export function getArtifactSearchKeywords(artifact: Artifact) {
