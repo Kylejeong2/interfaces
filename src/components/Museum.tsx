@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'motion/react'
 import { useEffect, useState } from 'react'
+import { ArtifactSearch } from './ArtifactSearch'
 import { ArtifactVisual } from './ArtifactVisual'
 import { ConstellationTimeline } from './ConstellationTimeline'
 import type { Artifact } from '#/data/artifacts'
@@ -20,10 +21,29 @@ const formatMonth = new Intl.DateTimeFormat('en-US', {
 
 export function Museum() {
   const [activeArtifact, setActiveArtifact] = useState<Artifact | null>(null)
+  const [searchOpen, setSearchOpen] = useState(false)
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault()
+        setSearchOpen((open) => !open)
+      }
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [])
+
+  useEffect(() => {
+    if (!activeArtifact && !searchOpen) return
+    document.body.classList.add('modal-open')
+    return () => document.body.classList.remove('modal-open')
+  }, [activeArtifact, searchOpen])
 
   useEffect(() => {
     if (!activeArtifact) return
     const onKeyDown = (event: KeyboardEvent) => {
+      if (searchOpen) return
       if (event.key === 'Escape') setActiveArtifact(null)
       if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
         const index = artifacts.findIndex(
@@ -35,17 +55,26 @@ export function Museum() {
         setActiveArtifact(next)
       }
     }
-    document.body.classList.add('modal-open')
     window.addEventListener('keydown', onKeyDown)
-    return () => {
-      document.body.classList.remove('modal-open')
-      window.removeEventListener('keydown', onKeyDown)
-    }
-  }, [activeArtifact])
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [activeArtifact, searchOpen])
 
   return (
     <main className="museum-shell museum-shell--constellation">
       <section className="hero" id="top">
+        <button
+          className="search-trigger"
+          type="button"
+          onMouseDown={(event) => {
+            event.preventDefault()
+            setSearchOpen(true)
+          }}
+          onClick={() => setSearchOpen(true)}
+          aria-label="Search interfaces"
+        >
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
         <p className="eyebrow">A living collection of machine interfaces</p>
         <h1>
           <span>The AI</span>
@@ -81,6 +110,16 @@ export function Museum() {
           <ArtifactDetail
             artifact={activeArtifact}
             onClose={() => setActiveArtifact(null)}
+          />
+        )}
+        {searchOpen && (
+          <ArtifactSearch
+            artifacts={artifacts}
+            onClose={() => setSearchOpen(false)}
+            onSelect={(artifact) => {
+              setActiveArtifact(artifact)
+              setSearchOpen(false)
+            }}
           />
         )}
       </AnimatePresence>
