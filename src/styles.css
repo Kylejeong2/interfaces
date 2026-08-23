@@ -152,7 +152,8 @@ button {
   top: 4svh;
   height: min(900px, 92svh);
   min-height: 700px;
-  overflow: clip;
+  overflow-x: auto;
+  overflow-y: clip;
   background:
     radial-gradient(
       circle at 50% 50%,
@@ -162,11 +163,20 @@ button {
     var(--paper);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  overscroll-behavior-inline: contain;
+  scrollbar-color: var(--ink) transparent;
+  scrollbar-width: thin;
   perspective: 1500px;
 }
 .constellation-timeline:focus-visible {
   outline: 2px solid var(--red);
   outline-offset: -2px;
+}
+.constellation-timeline::-webkit-scrollbar {
+  height: 8px;
+}
+.constellation-timeline::-webkit-scrollbar-thumb {
+  background: var(--ink);
 }
 .constellation-atmosphere {
   position: absolute;
@@ -982,45 +992,23 @@ button {
 }
 
 .museum-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 70px 24px;
+  min-height: 210px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 48px 24px;
   background: var(--ink);
   color: var(--paper);
 }
-.museum-footer > div {
-  min-height: 180px;
-  padding-right: 24px;
-  border-right: 1px solid rgba(255, 255, 255, 0.18);
-}
-.museum-footer > div + div {
-  padding-left: 24px;
-}
-.museum-footer > div:last-child {
-  border: 0;
-}
-.museum-footer span {
-  display: grid;
-  place-items: center;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: var(--paper);
-  color: var(--ink);
-  font: 500 14px/1 'DM Mono';
-}
 .museum-footer p {
-  margin: 24px 0 0;
+  margin: 0;
+  text-align: right;
   font: 300 12px/1.5 'DM Mono';
   text-transform: uppercase;
 }
 .museum-shell--constellation .museum-footer {
   background: #050608;
   color: #f2f0e8;
-}
-.museum-shell--constellation .museum-footer span {
-  background: #f2f0e8;
-  color: #080a0e;
 }
 
 .detail-backdrop {
@@ -1287,17 +1275,8 @@ button {
     font-size: 72px;
   }
   .museum-footer {
-    grid-template-columns: 1fr;
-    padding: 42px 14px;
-  }
-  .museum-footer > div {
-    min-height: 130px;
-    border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  }
-  .museum-footer > div + div {
-    padding-left: 0;
-    padding-top: 22px;
+    min-height: 170px;
+    padding: 36px 14px;
   }
   .detail-backdrop {
     padding: 0;

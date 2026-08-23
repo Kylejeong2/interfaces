@@ -70,29 +70,10 @@ export function Museum() {
       </section>
 
       <footer className="museum-footer">
-        <div>
-          <span>AIM</span>
-          <p>
-            The interfaces change.
-            <br />
-            The human intent persists.
-          </p>
-        </div>
-        <div>
-          <p>
-            Research-led
-            <br />
-            Read-only
-            <br />
-            Continuously revised
-          </p>
-        </div>
-        <div>
-          <p>
-            Built in California
-            <br />© {new Date().getFullYear()} Kyle Jeong
-          </p>
-        </div>
+        <p>
+          Built by Kyle Jeong
+          <br />© 2026
+        </p>
       </footer>
 
       <AnimatePresence>
