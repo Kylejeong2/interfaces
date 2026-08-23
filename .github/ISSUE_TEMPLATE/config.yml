@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contribution guide
+    url: https://github.com/Kylejeong2/interfaces/blob/main/CONTRIBUTING.md
+    about: Read the artifact standard and research requirements before proposing an interface.
+  - name: Private security report
+    url: https://github.com/Kylejeong2/interfaces/security/advisories/new
+    about: Report a vulnerability privately instead of opening a public issue.

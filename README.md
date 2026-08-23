@@ -28,6 +28,8 @@ The Husky pre-commit hook runs formatting and lint checks. If it fails, run `pnp
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) for the artifact standard, research and image requirements, development workflow, and pull request checklist.
 
+Before participating, read the [Code of Conduct](CODE_OF_CONDUCT.md). Report vulnerabilities through the private process in [SECURITY.md](SECURITY.md).
+
 ## License
 
 The source code is available under the [MIT License](LICENSE). Product names, marks, and archival imagery remain the property of their respective owners and are included for historical and editorial reference.

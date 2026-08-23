@@ -1,0 +1,66 @@
+name: Artifact proposal
+description: Propose an influential AI interface for the timeline.
+title: 'Artifact: '
+labels:
+  - artifact proposal
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose the interface, not only the company or model. Strong proposals show a meaningful interaction change, clear adoption or influence, and traceable historical material.
+  - type: input
+    id: product
+    attributes:
+      label: Product and interface
+      description: Name the specific product generation or interface being proposed.
+      placeholder: ChatGPT Canvas
+    validations:
+      required: true
+  - type: input
+    id: release-date
+    attributes:
+      label: Earliest defensible public release date
+      description: Include the date precision you can support.
+      placeholder: October 3, 2024
+    validations:
+      required: true
+  - type: textarea
+    id: significance
+    attributes:
+      label: What changed
+      description: Explain the new interaction pattern and why it mattered.
+    validations:
+      required: true
+  - type: textarea
+    id: adoption
+    attributes:
+      label: Adoption or influence
+      description: Provide evidence of usage, cultural impact, or downstream influence.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources
+      description: Link official announcements, documentation, demos, or launch videos.
+      placeholder: One URL per line
+    validations:
+      required: true
+  - type: textarea
+    id: image
+    attributes:
+      label: Historical interface image
+      description: Link a real interface capture and explain its provenance. Do not submit logos, key art, or generated replacements.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Proposal checklist
+      options:
+        - label: I searched the existing timeline and open proposals for duplicates.
+          required: true
+        - label: This proposal documents an interface change, not only a model or company launch.
+          required: true
+        - label: The proposed image shows the real interface and has traceable provenance.
+          required: true
