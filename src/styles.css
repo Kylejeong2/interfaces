@@ -139,15 +139,20 @@ button {
 }
 
 .collection {
-  padding: 0 0 140px;
+  padding: 0;
+}
+
+.constellation-scroll {
+  position: relative;
+  height: calc(100svh + var(--timeline-scroll-distance, 0px));
 }
 
 .constellation-timeline {
-  position: relative;
+  position: sticky;
+  top: 4svh;
   height: min(900px, 92svh);
   min-height: 700px;
-  overflow-x: auto;
-  overflow-y: clip;
+  overflow: clip;
   background:
     radial-gradient(
       circle at 50% 50%,
@@ -157,21 +162,11 @@ button {
     var(--paper);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  scroll-snap-type: x proximity;
-  overscroll-behavior-inline: contain;
-  scrollbar-width: thin;
-  scrollbar-color: var(--ink) transparent;
   perspective: 1500px;
 }
 .constellation-timeline:focus-visible {
   outline: 2px solid var(--red);
   outline-offset: -2px;
-}
-.constellation-timeline::-webkit-scrollbar {
-  height: 8px;
-}
-.constellation-timeline::-webkit-scrollbar-thumb {
-  background: var(--ink);
 }
 .constellation-atmosphere {
   position: absolute;
@@ -1271,12 +1266,12 @@ button {
     align-self: flex-end;
   }
   .collection {
-    padding: 0 0 80px;
+    padding: 0;
   }
   .constellation-timeline {
+    top: 13svh;
     height: 74svh;
     min-height: 560px;
-    scroll-snap-type: x mandatory;
   }
   .constellation-track {
     --node-step: 78vw;
