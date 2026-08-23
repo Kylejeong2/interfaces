@@ -2,6 +2,7 @@
   "name": "ai-interface-museum",
   "private": true,
   "type": "module",
+  "license": "MIT",
   "packageManager": "pnpm@10.22.0",
   "imports": {
     "#/*": "./src/*"
