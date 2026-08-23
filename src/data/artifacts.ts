@@ -115,7 +115,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 82,
     visual: 'cards',
     accent: '#5f87ff',
+    imageUrl: '/artifacts/google-now-2012.jpg',
+    imageAlt:
+      'Google Now on Android 4.1 displaying predictive weather and nearby-place cards',
     sources: [
+      {
+        label: 'Interface capture: IT Pro Android 4.1 review',
+        url: 'https://www.itpro.com/641992/google-android-jelly-bean-41-review/2',
+        kind: 'source',
+      },
       {
         label: 'Google I/O 2012 keynote',
         url: 'https://www.youtube.com/watch?v=VuC0i4xTyrI',
@@ -218,7 +226,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 79,
     visual: 'canvas',
     accent: '#ff4b63',
+    imageUrl: '/artifacts/prisma-2016.png',
+    imageAlt:
+      'Original Prisma interface showing a transformed photo and neural-style filter carousel',
     sources: [
+      {
+        label: 'Interface capture: Tech Advisor Prisma guide',
+        url: 'https://www.techadvisor.com/article/729003/how-to-use-prisma.html',
+        kind: 'source',
+      },
       {
         label: 'Prisma product history',
         url: 'https://prisma-ai.com/',
@@ -389,6 +405,9 @@ export const artifacts: Array<Artifact> = [
     popularity: 85,
     visual: 'canvas',
     accent: '#e4a647',
+    imageUrl: '/artifacts/dall-e-2021.png',
+    imageAlt:
+      'Official DALL·E interactive demo showing text prompts and generated result grids',
     sources: [
       {
         label: 'Introducing DALL·E',
@@ -456,7 +475,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 91,
     visual: 'canvas',
     accent: '#ff795f',
+    imageUrl: '/artifacts/dall-e-2-2022.png',
+    imageAlt:
+      'DALL·E 2 beta editor showing an outpainting frame over an underwater illustration',
     sources: [
+      {
+        label: 'Interface capture: DALL·E 2 outpainting editor',
+        url: 'https://jimclydemonge.medium.com/dall-e2-ais-outpainting-feature-is-incredible-450cdf5b804f',
+        kind: 'source',
+      },
       {
         label: 'DALL·E 2 announcement',
         url: 'https://openai.com/index/dall-e-2/',
@@ -524,7 +551,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 100,
     visual: 'chat',
     accent: '#10a37f',
+    imageUrl: '/artifacts/chatgpt-2022.jpg',
+    imageAlt:
+      'Early ChatGPT interface with the free research preview onboarding dialog',
     sources: [
+      {
+        label: 'Interface capture: original research preview',
+        url: 'https://www.tomsguide.com/how-to/how-to-use-chatgpt',
+        kind: 'source',
+      },
       {
         label: 'Introducing ChatGPT',
         url: 'https://openai.com/index/chatgpt/',
@@ -556,7 +591,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 90,
     visual: 'search',
     accent: '#20a39e',
+    imageUrl: '/artifacts/perplexity-2022.jpg',
+    imageAlt:
+      'Early Perplexity homepage with Ask Anything search and Popular Now cards',
     sources: [
+      {
+        label: 'Interface capture: early Perplexity',
+        url: 'https://www.windowscentral.com/software-apps/perplexity-is-a-lightning-fast-totally-free-chatgpt-app-you-can-use-on-your-windows-pc-and-iphone',
+        kind: 'source',
+      },
       {
         label: 'Perplexity product',
         url: 'https://www.perplexity.ai/',
@@ -658,7 +701,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 96,
     visual: 'vision',
     accent: '#8d79ff',
+    imageUrl: '/artifacts/gpt4-vision-2023.jpg',
+    imageAlt:
+      'ChatGPT voice and vision interfaces with a photographed bicycle and visual response',
     sources: [
+      {
+        label: 'Interface capture: ChatGPT vision launch',
+        url: 'https://www.digit.in/news/general/openais-chatgpt-can-now-see-hear-and-speak-check-details.html',
+        kind: 'source',
+      },
       {
         label: 'ChatGPT can now see, hear, and speak',
         url: 'https://openai.com/index/chatgpt-can-now-see-hear-and-speak/',
@@ -690,6 +741,9 @@ export const artifacts: Array<Artifact> = [
     popularity: 72,
     visual: 'agent',
     accent: '#ff5b48',
+    imageUrl: '/artifacts/rabbit-r1-2024.jpg',
+    imageAlt:
+      'Rabbit r1 displaying its Vision interface while recognizing media',
     sources: [
       {
         label: 'Rabbit R1 launch keynote',
@@ -723,7 +777,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 91,
     visual: 'canvas',
     accent: '#ff664f',
+    imageUrl: '/artifacts/sora-2024.jpg',
+    imageAlt:
+      'Sora Storyboard interface with two prompt cards arranged above a video timeline',
     sources: [
+      {
+        label: 'Watch the Sora Storyboard interface demo',
+        url: 'https://www.youtube.com/watch?v=6PXWAvUG8Sg',
+        kind: 'watch',
+      },
       {
         label: 'Sora is here',
         url: 'https://openai.com/index/sora-is-here/',
@@ -860,7 +922,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 90,
     visual: 'canvas',
     accent: '#10a37f',
+    imageUrl: '/artifacts/chatgpt-canvas-2024.jpg',
+    imageAlt:
+      'ChatGPT Canvas split view with conversation beside an editable document',
     sources: [
+      {
+        label: 'Watch the Canvas interface demo',
+        url: 'https://www.youtube.com/watch?v=Ks1C-5p04PY',
+        kind: 'watch',
+      },
       {
         label: 'Introducing Canvas',
         url: 'https://openai.com/index/introducing-canvas/',
@@ -893,6 +963,9 @@ export const artifacts: Array<Artifact> = [
     popularity: 86,
     visual: 'agent',
     accent: '#d97757',
+    imageUrl: '/artifacts/computer-use-2024.jpg',
+    imageAlt:
+      'Claude computer use demo showing its task log beside a spreadsheet and vendor form',
     sources: [
       {
         label: 'Computer use announcement',
@@ -1029,7 +1102,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 97,
     visual: 'canvas',
     accent: '#ef8f59',
+    imageUrl: '/artifacts/chatgpt-images-2025.jpg',
+    imageAlt:
+      'ChatGPT 4o image generation interface creating an illustrated avatar from a prompt',
     sources: [
+      {
+        label: 'Watch the 4o image generation demo',
+        url: 'https://www.youtube.com/watch?v=E9RN8jX--uc',
+        kind: 'watch',
+      },
       {
         label: 'Introducing 4o image generation',
         url: 'https://openai.com/index/introducing-4o-image-generation/',
@@ -1062,7 +1143,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 88,
     visual: 'agent',
     accent: '#4978ee',
+    imageUrl: '/artifacts/manus-2025.jpg',
+    imageAlt:
+      'Manus agent session showing a completed property report and generated files',
     sources: [
+      {
+        label: 'Watch the Manus launch demo',
+        url: 'https://www.youtube.com/watch?v=K27diMbCsuw',
+        kind: 'watch',
+      },
       {
         label: 'Manus three-month retrospective',
         url: 'https://manus.im/blog/what-we-saw-in-the-past-three-months-and-what-we-see-in-the-future',
@@ -1095,6 +1184,8 @@ export const artifacts: Array<Artifact> = [
     popularity: 89,
     visual: 'agent',
     accent: '#111111',
+    imageUrl: '/artifacts/codex-2025.jpg',
+    imageAlt: 'Codex cloud task review with a work summary and code diff',
     sources: [
       {
         label: 'Introducing Codex',
@@ -1163,7 +1254,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 89,
     visual: 'agent',
     accent: '#111111',
+    imageUrl: '/artifacts/chatgpt-agent-2025.jpg',
+    imageAlt:
+      'ChatGPT mobile interface running Agent mode during the launch demo',
     sources: [
+      {
+        label: 'Watch the ChatGPT Agent interface demo',
+        url: 'https://www.youtube.com/watch?v=1jn_RpbPbEc',
+        kind: 'watch',
+      },
       {
         label: 'Introducing ChatGPT agent',
         url: 'https://openai.com/index/introducing-chatgpt-agent/',
@@ -1231,7 +1330,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 81,
     visual: 'agent',
     accent: '#d97757',
+    imageUrl: '/artifacts/claude-cowork-2026.jpg',
+    imageAlt:
+      'Claude Cowork workspace with chat, progress steps, artifacts, and context',
     sources: [
+      {
+        label: 'Watch the Claude Cowork interface demo',
+        url: 'https://www.youtube.com/watch?v=UAmKyyZ-b9E',
+        kind: 'watch',
+      },
       {
         label: 'Introducing Anthropic Labs',
         url: 'https://www.anthropic.com/news/introducing-anthropic-labs',
@@ -1298,7 +1405,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 88,
     visual: 'agent',
     accent: '#111111',
+    imageUrl: '/artifacts/codex-app-2026.jpg',
+    imageAlt:
+      'Codex desktop app with projects, parallel task threads, and an active agent workspace',
     sources: [
+      {
+        label: 'Watch the Codex app interface demo',
+        url: 'https://www.youtube.com/watch?v=HFM3se4lNiw',
+        kind: 'watch',
+      },
       {
         label: 'Introducing the Codex app',
         url: 'https://openai.com/index/introducing-the-codex-app/',
@@ -1332,7 +1447,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 91,
     visual: 'cards',
     accent: '#1db954',
+    imageUrl: '/artifacts/spotify-discover-weekly-2015.jpg',
+    imageAlt:
+      'Original Discover Weekly playlist across Spotify desktop, tablet, and mobile apps',
     sources: [
+      {
+        label: 'Interface capture: Discover Weekly launch retrospective',
+        url: 'https://engineering.atspotify.com/2015/11/what-made-discover-weekly-one-of-our-most-successful-feature-launches-to-date',
+        kind: 'source',
+      },
       {
         label: 'Five years of Discover Weekly',
         url: 'https://newsroom.spotify.com/2020-07-09/spotify-users-have-spent-over-2-3-billion-hours-streaming-discover-weekly-playlists-since-2015/',
@@ -1366,7 +1489,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 89,
     visual: 'vision',
     accent: '#d13a35',
+    imageUrl: '/artifacts/tesla-autopilot-2015.webp',
+    imageAlt:
+      'Tesla Model S instrument cluster showing Autopilot engaged with lane and vehicle visualization',
     sources: [
+      {
+        label: 'Interface capture: 2015 Autopilot first test',
+        url: 'https://www.motortrend.com/features/let-elon-drive-tesla-autopilot-first-test',
+        kind: 'source',
+      },
       {
         label: 'Tesla Autopilot support',
         url: 'https://www.tesla.com/support/autopilot',
@@ -1399,7 +1530,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 97,
     visual: 'cards',
     accent: '#fe2c55',
+    imageUrl: '/artifacts/tiktok-for-you-2018.png',
+    imageAlt:
+      'TikTok interface snapshot showing the For You feed and primary navigation screens',
     sources: [
+      {
+        label: 'Interface capture: TikTok advertiser deck',
+        url: 'https://www.socialfeedpodcast.com/wp-content/uploads/2020/01/TikTok-Deck.pdf',
+        kind: 'source',
+      },
       {
         label: 'The unified TikTok launch',
         url: 'https://newsroom.tiktok.com/musical-ly-and/?lang=en',
@@ -1432,7 +1571,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 84,
     visual: 'agent',
     accent: '#1573e6',
+    imageUrl: '/artifacts/waymo-one-2018.png',
+    imageAlt:
+      'Waymo One app screens for choosing pickup, choosing drop-off, and requesting a ride',
     sources: [
+      {
+        label: 'Interface capture: Waymo One launch',
+        url: 'https://waymo.com/blog/2018/12/riding-with-waymo-one-today/',
+        kind: 'source',
+      },
       {
         label: 'Waymo One launch',
         url: 'https://waymo.com/blog/2018/12/waymo-one-next-step-on-our-self-driving/',
@@ -1465,7 +1612,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 82,
     visual: 'code',
     accent: '#10a37f',
+    imageUrl: '/artifacts/gpt3-playground-2020.png',
+    imageAlt:
+      'OpenAI API Beta Playground with a GPT-3 completion and model parameter controls',
     sources: [
+      {
+        label: 'Interface capture: 2020 GPT-3 Playground guide',
+        url: 'https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model',
+        kind: 'source',
+      },
       {
         label: 'OpenAI API launch',
         url: 'https://openai.com/index/openai-api/',
@@ -1498,7 +1653,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 93,
     visual: 'canvas',
     accent: '#7f62d9',
+    imageUrl: '/artifacts/stable-diffusion-2022.jpeg',
+    imageAlt:
+      'DreamStudio Lite displaying Stable Diffusion results beside generation controls',
     sources: [
+      {
+        label: 'Interface capture: DreamStudio Lite',
+        url: 'https://www.musicbusinessworldwide.com/this-ai-firm-just-raised-101m-at-a-reported-1bn-valuation-and-music-is-one-of-its-areas-of-focus/',
+        kind: 'source',
+      },
       {
         label: 'Stable Diffusion public release',
         url: 'https://stability.ai/news-updates/stable-diffusion-public-release',
@@ -1532,7 +1695,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 89,
     visual: 'chat',
     accent: '#6f58d9',
+    imageUrl: '/artifacts/character-ai-2022.png',
+    imageAlt:
+      'Legacy Character.AI homepage with character cards, categories, and navigation',
     sources: [
+      {
+        label: 'Interface capture: legacy Character.AI',
+        url: 'https://wisdomtech.academy/ai-character/',
+        kind: 'source',
+      },
       {
         label: 'Introducing Character',
         url: 'https://blog.character.ai/introducing-character/',
@@ -1565,7 +1736,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 92,
     visual: 'code',
     accent: '#faf7ee',
+    imageUrl: '/artifacts/cursor-inline-2023.png',
+    imageAlt:
+      'Cursor original dark editor with a Cmd+K prompt floating above selected code',
     sources: [
+      {
+        label: 'Preserved original Cursor interface',
+        url: 'https://www.reddit.com/r/ChatGPTCoding/comments/1fz87x6/cursorai_removed_opensource_repo_with_their_old/',
+        kind: 'source',
+      },
       {
         label: 'Cursor 0.2.39 inline edits',
         url: 'https://cursor.com/changelog/0-2-39',
@@ -1597,7 +1776,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 87,
     visual: 'canvas',
     accent: '#111111',
+    imageUrl: '/artifacts/v0-2023.jpg',
+    imageAlt:
+      'Early v0 private-alpha homepage with a natural-language prompt and generated UI examples',
     sources: [
+      {
+        label: 'Interface capture: v0 private alpha',
+        url: 'https://www.toolify.ai/tool/v0-dev-by-vercel-labs',
+        kind: 'source',
+      },
       {
         label: 'Announcing v0',
         url: 'https://vercel.com/blog/announcing-v0-generative-ui',
@@ -1630,7 +1817,15 @@ export const artifacts: Array<Artifact> = [
     popularity: 96,
     visual: 'voice',
     accent: '#4ec8ab',
+    imageUrl: '/artifacts/gpt4o-2024.jpg',
+    imageAlt:
+      'OpenAI GPT-4o live demo with a phone camera feed shown on the presentation screen',
     sources: [
+      {
+        label: 'Watch the GPT-4o interface demo',
+        url: 'https://www.youtube.com/watch?v=DQacCB9tDaw',
+        kind: 'watch',
+      },
       {
         label: 'Hello GPT-4o',
         url: 'https://openai.com/index/hello-gpt-4o/',
