@@ -758,6 +758,47 @@ export const artifacts: Array<Artifact> = [
     ],
   },
   {
+    id: 'devin-2024',
+    date: '2024-03-12',
+    year: 2024,
+    name: 'Devin',
+    edition: 'Technical preview',
+    maker: 'Cognition',
+    description:
+      'A cloud coding agent that paired conversation with a live workspace containing its shell, code editor, browser, and planning trace.',
+    changed:
+      'The unit of assistance expanded from suggesting code to completing a delegated engineering task. Users could watch progress, inspect tools, intervene, and review the result.',
+    lineage:
+      'Code completion → AI-native editor → autonomous cloud coding agent → parallel agent workspace',
+    impact:
+      'Devin made the autonomous software engineer a widely understood product category. Cognition later reported that its annual recurring revenue grew from $1 million in September 2024 to $73 million in June 2025.',
+    forms: ['Code', 'Agents', 'Computer use'],
+    layers: ['Developer tool'],
+    popularity: 93,
+    visual: 'agent',
+    accent: '#7c72e8',
+    imageUrl: '/artifacts/devin-2024.jpg',
+    imageAlt:
+      'Original Devin technical preview showing chat beside its live shell, code editor, and browser workspace',
+    sources: [
+      {
+        label: 'Watch the original Devin workspace demo',
+        url: 'https://www.youtube.com/watch?v=V_J-xOeCklQ',
+        kind: 'watch',
+      },
+      {
+        label: 'Introducing Devin',
+        url: 'https://cognition.com/blog/introducing-devin',
+        kind: 'source',
+      },
+      {
+        label: 'Cognition reports Devin adoption growth',
+        url: 'https://cognition.com/blog/funding-growth-and-the-next-frontier-of-ai-coding-agents',
+        kind: 'source',
+      },
+    ],
+  },
+  {
     id: 'sora-2024',
     date: '2024-12-09',
     year: 2024,
