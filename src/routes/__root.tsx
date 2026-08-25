@@ -15,7 +15,10 @@ export const Route = createRootRoute({
         content: 'A visual history of how humans learned to interact with AI.',
       },
     ],
-    links: [{ rel: 'stylesheet', href: appCss }],
+    links: [
+      { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+      { rel: 'stylesheet', href: appCss },
+    ],
   }),
   shellComponent: RootDocument,
 })

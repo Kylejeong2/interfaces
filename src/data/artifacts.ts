@@ -80,7 +80,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 96,
     visual: 'voice',
     accent: '#7d6bff',
-    imageUrl: '/artifacts/siri-2011.png',
+    imageUrl: '/artifacts/siri-2011.webp',
     imageAlt: 'The original Siri interface in iOS 5',
     sources: [
       {
@@ -115,7 +115,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 82,
     visual: 'cards',
     accent: '#5f87ff',
-    imageUrl: '/artifacts/google-now-2012.jpg',
+    imageUrl: '/artifacts/google-now-2012.webp',
     imageAlt:
       'Google Now on Android 4.1 displaying predictive weather and nearby-place cards',
     sources: [
@@ -157,7 +157,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 94,
     visual: 'voice',
     accent: '#39a8df',
-    imageUrl: '/artifacts/amazon-echo.jpg',
+    imageUrl: '/artifacts/amazon-echo.webp',
     imageAlt: 'The team behind Amazon Alexa with early Echo devices',
     sources: [
       {
@@ -192,7 +192,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 91,
     visual: 'vision',
     accent: '#f5b82e',
-    imageUrl: '/artifacts/google-photos.png',
+    imageUrl: '/artifacts/google-photos.webp',
     imageAlt: 'The Google Photos interface at launch',
     sources: [
       {
@@ -226,7 +226,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 79,
     visual: 'canvas',
     accent: '#ff4b63',
-    imageUrl: '/artifacts/prisma-2016.png',
+    imageUrl: '/artifacts/prisma-2016.webp',
     imageAlt:
       'Original Prisma interface showing a transformed photo and neural-style filter carousel',
     sources: [
@@ -266,7 +266,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 92,
     visual: 'chat',
     accent: '#4285f4',
-    imageUrl: '/artifacts/google-assistant-2016.png',
+    imageUrl: '/artifacts/google-assistant-2016.webp',
     imageAlt: 'The original Google Assistant conversational interface',
     sources: [
       {
@@ -300,7 +300,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 89,
     visual: 'vision',
     accent: '#2bb673',
-    imageUrl: '/artifacts/google-lens-2017.png',
+    imageUrl: '/artifacts/google-lens-2017.webp',
     imageAlt: 'Google Lens recognizing the world through a phone camera',
     sources: [
       {
@@ -335,7 +335,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 84,
     visual: 'agent',
     accent: '#e65f51',
-    imageUrl: '/artifacts/google-duplex-2018.png',
+    imageUrl: '/artifacts/google-duplex-2018.webp',
     imageAlt: 'Google Assistant showing a completed Duplex reservation',
     sources: [
       {
@@ -370,7 +370,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 87,
     visual: 'code',
     accent: '#587df2',
-    imageUrl: '/artifacts/smart-compose-2018.png',
+    imageUrl: '/artifacts/smart-compose-2018.webp',
     imageAlt: 'Gmail Smart Compose suggesting inline email text',
     sources: [
       {
@@ -405,7 +405,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 85,
     visual: 'canvas',
     accent: '#e4a647',
-    imageUrl: '/artifacts/dall-e-2021.png',
+    imageUrl: '/artifacts/dall-e-2021.webp',
     imageAlt:
       'Official DALL·E interactive demo showing text prompts and generated result grids',
     sources: [
@@ -441,7 +441,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 94,
     visual: 'code',
     accent: '#8a7cff',
-    imageUrl: '/artifacts/github-copilot.png',
+    imageUrl: '/artifacts/github-copilot.webp',
     imageAlt: 'GitHub Copilot completing code inside an editor',
     sources: [
       {
@@ -475,7 +475,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 91,
     visual: 'canvas',
     accent: '#ff795f',
-    imageUrl: '/artifacts/dall-e-2-2022.png',
+    imageUrl: '/artifacts/dall-e-2-2022.webp',
     imageAlt:
       'DALL·E 2 beta editor showing an outpainting frame over an underwater illustration',
     sources: [
@@ -516,7 +516,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 93,
     visual: 'canvas',
     accent: '#6a8cff',
-    imageUrl: '/artifacts/midjourney-discord-2022.jpg',
+    imageUrl: '/artifacts/midjourney-discord-2022.webp',
     imageAlt: 'Midjourney image generation inside Discord',
     sources: [
       {
@@ -551,7 +551,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 100,
     visual: 'chat',
     accent: '#10a37f',
-    imageUrl: '/artifacts/chatgpt-2022.jpg',
+    imageUrl: '/artifacts/chatgpt-2022.webp',
     imageAlt:
       'Early ChatGPT interface with the free research preview onboarding dialog',
     sources: [
@@ -591,7 +591,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 90,
     visual: 'search',
     accent: '#20a39e',
-    imageUrl: '/artifacts/perplexity-2022.jpg',
+    imageUrl: '/artifacts/perplexity-2022.webp',
     imageAlt:
       'Early Perplexity homepage with Ask Anything search and Popular Now cards',
     sources: [
@@ -631,7 +631,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 92,
     visual: 'search',
     accent: '#2176ff',
-    imageUrl: '/artifacts/new-bing-2023.png',
+    imageUrl: '/artifacts/new-bing-2023.webp',
     imageAlt: 'The New Bing conversational search interface',
     sources: [
       {
@@ -666,7 +666,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 92,
     visual: 'canvas',
     accent: '#e54d4d',
-    imageUrl: '/artifacts/adobe-firefly.jpg',
+    imageUrl: '/artifacts/adobe-firefly.webp',
     imageAlt: 'Adobe Firefly generative image interface and outputs',
     sources: [
       {
@@ -701,7 +701,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 96,
     visual: 'vision',
     accent: '#8d79ff',
-    imageUrl: '/artifacts/gpt4-vision-2023.jpg',
+    imageUrl: '/artifacts/gpt4-vision-2023.webp',
     imageAlt:
       'ChatGPT voice and vision interfaces with a photographed bicycle and visual response',
     sources: [
@@ -741,7 +741,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 72,
     visual: 'agent',
     accent: '#ff5b48',
-    imageUrl: '/artifacts/rabbit-r1-2024.jpg',
+    imageUrl: '/artifacts/rabbit-r1-2024.webp',
     imageAlt:
       'Rabbit r1 displaying its Vision interface while recognizing media',
     sources: [
@@ -777,7 +777,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 93,
     visual: 'agent',
     accent: '#7c72e8',
-    imageUrl: '/artifacts/devin-2024.jpg',
+    imageUrl: '/artifacts/devin-2024.webp',
     imageAlt:
       'Original Devin technical preview showing chat beside its live shell, code editor, and browser workspace',
     sources: [
@@ -818,7 +818,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 91,
     visual: 'canvas',
     accent: '#ff664f',
-    imageUrl: '/artifacts/sora-2024.jpg',
+    imageUrl: '/artifacts/sora-2024.webp',
     imageAlt:
       'Sora Storyboard interface with two prompt cards arranged above a video timeline',
     sources: [
@@ -858,7 +858,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 92,
     visual: 'canvas',
     accent: '#d97757',
-    imageUrl: '/artifacts/claude-artifacts.png',
+    imageUrl: '/artifacts/claude-artifacts.webp',
     imageAlt:
       'Claude Artifacts split-pane interface with chat and generated code',
     sources: [
@@ -894,7 +894,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 88,
     visual: 'voice',
     accent: '#796eff',
-    imageUrl: '/artifacts/gemini-live.jpg',
+    imageUrl: '/artifacts/gemini-live.webp',
     imageAlt: 'Gemini Live running on a mobile phone',
     sources: [
       {
@@ -929,7 +929,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 90,
     visual: 'voice',
     accent: '#e7a528',
-    imageUrl: '/artifacts/notebooklm-audio.png',
+    imageUrl: '/artifacts/notebooklm-audio.webp',
     imageAlt: 'NotebookLM Audio Overview player and source notebook',
     sources: [
       {
@@ -963,7 +963,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 90,
     visual: 'canvas',
     accent: '#10a37f',
-    imageUrl: '/artifacts/chatgpt-canvas-2024.jpg',
+    imageUrl: '/artifacts/chatgpt-canvas-2024.webp',
     imageAlt:
       'ChatGPT Canvas split view with conversation beside an editable document',
     sources: [
@@ -1004,7 +1004,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 86,
     visual: 'agent',
     accent: '#d97757',
-    imageUrl: '/artifacts/computer-use-2024.jpg',
+    imageUrl: '/artifacts/computer-use-2024.webp',
     imageAlt:
       'Claude computer use demo showing its task log beside a spreadsheet and vendor form',
     sources: [
@@ -1040,7 +1040,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 88,
     visual: 'agent',
     accent: '#111111',
-    imageUrl: '/artifacts/operator-2025.png',
+    imageUrl: '/artifacts/operator-2025.webp',
     imageAlt: 'Operator working through a task in a visible browser',
     sources: [
       {
@@ -1074,7 +1074,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 91,
     visual: 'search',
     accent: '#3266d5',
-    imageUrl: '/artifacts/deep-research-2025.png',
+    imageUrl: '/artifacts/deep-research-2025.webp',
     imageAlt: 'ChatGPT Deep Research activity and source panel',
     sources: [
       {
@@ -1109,7 +1109,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 92,
     visual: 'code',
     accent: '#d97757',
-    imageUrl: '/artifacts/claude-code-2025.png',
+    imageUrl: '/artifacts/claude-code-2025.webp',
     imageAlt: 'Claude Code running as a terminal coding agent',
     sources: [
       {
@@ -1143,7 +1143,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 97,
     visual: 'canvas',
     accent: '#ef8f59',
-    imageUrl: '/artifacts/chatgpt-images-2025.jpg',
+    imageUrl: '/artifacts/chatgpt-images-2025.webp',
     imageAlt:
       'ChatGPT 4o image generation interface creating an illustrated avatar from a prompt',
     sources: [
@@ -1184,7 +1184,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 88,
     visual: 'agent',
     accent: '#4978ee',
-    imageUrl: '/artifacts/manus-2025.jpg',
+    imageUrl: '/artifacts/manus-2025.webp',
     imageAlt:
       'Manus agent session showing a completed property report and generated files',
     sources: [
@@ -1225,7 +1225,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 89,
     visual: 'agent',
     accent: '#111111',
-    imageUrl: '/artifacts/codex-2025.jpg',
+    imageUrl: '/artifacts/codex-2025.webp',
     imageAlt: 'Codex cloud task review with a work summary and code diff',
     sources: [
       {
@@ -1260,7 +1260,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 86,
     visual: 'canvas',
     accent: '#4578f8',
-    imageUrl: '/artifacts/flow.png',
+    imageUrl: '/artifacts/flow.webp',
     imageAlt: 'Google Flow generative filmmaking workspace',
     sources: [
       {
@@ -1295,7 +1295,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 89,
     visual: 'agent',
     accent: '#111111',
-    imageUrl: '/artifacts/chatgpt-agent-2025.jpg',
+    imageUrl: '/artifacts/chatgpt-agent-2025.webp',
     imageAlt:
       'ChatGPT mobile interface running Agent mode during the launch demo',
     sources: [
@@ -1336,7 +1336,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 80,
     visual: 'canvas',
     accent: '#ff3f7f',
-    imageUrl: '/artifacts/suno-studio.png',
+    imageUrl: '/artifacts/suno-studio.webp',
     imageAlt: 'Suno Studio multitrack generative music canvas',
     sources: [
       {
@@ -1371,7 +1371,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 81,
     visual: 'agent',
     accent: '#d97757',
-    imageUrl: '/artifacts/claude-cowork-2026.jpg',
+    imageUrl: '/artifacts/claude-cowork-2026.webp',
     imageAlt:
       'Claude Cowork workspace with chat, progress steps, artifacts, and context',
     sources: [
@@ -1412,7 +1412,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 74,
     visual: 'vision',
     accent: '#f0bd25',
-    imageUrl: '/artifacts/helix-02.jpg',
+    imageUrl: '/artifacts/helix-02.webp',
     imageAlt: 'Figure Helix 02 humanoid performing a household task',
     sources: [
       {
@@ -1446,7 +1446,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 88,
     visual: 'agent',
     accent: '#111111',
-    imageUrl: '/artifacts/codex-app-2026.jpg',
+    imageUrl: '/artifacts/codex-app-2026.webp',
     imageAlt:
       'Codex desktop app with projects, parallel task threads, and an active agent workspace',
     sources: [
@@ -1487,7 +1487,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 86,
     visual: 'chat',
     accent: '#55a6a2',
-    imageUrl: '/artifacts/poke-2026.jpg',
+    imageUrl: '/artifacts/poke-2026.webp',
     imageAlt:
       'Poke conversation in Apple Messages asking the agent to check a traveler into a flight',
     sources: [
@@ -1534,7 +1534,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 91,
     visual: 'cards',
     accent: '#1db954',
-    imageUrl: '/artifacts/spotify-discover-weekly-2015.jpg',
+    imageUrl: '/artifacts/spotify-discover-weekly-2015.webp',
     imageAlt:
       'Original Discover Weekly playlist across Spotify desktop, tablet, and mobile apps',
     sources: [
@@ -1617,7 +1617,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 97,
     visual: 'cards',
     accent: '#fe2c55',
-    imageUrl: '/artifacts/tiktok-for-you-2018.png',
+    imageUrl: '/artifacts/tiktok-for-you-2018.webp',
     imageAlt:
       'TikTok interface snapshot showing the For You feed and primary navigation screens',
     sources: [
@@ -1658,7 +1658,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 84,
     visual: 'agent',
     accent: '#1573e6',
-    imageUrl: '/artifacts/waymo-one-2018.png',
+    imageUrl: '/artifacts/waymo-one-2018.webp',
     imageAlt:
       'Waymo One app screens for choosing pickup, choosing drop-off, and requesting a ride',
     sources: [
@@ -1699,7 +1699,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 82,
     visual: 'code',
     accent: '#10a37f',
-    imageUrl: '/artifacts/gpt3-playground-2020.png',
+    imageUrl: '/artifacts/gpt3-playground-2020.webp',
     imageAlt:
       'OpenAI API Beta Playground with a GPT-3 completion and model parameter controls',
     sources: [
@@ -1740,7 +1740,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 93,
     visual: 'canvas',
     accent: '#7f62d9',
-    imageUrl: '/artifacts/stable-diffusion-2022.jpeg',
+    imageUrl: '/artifacts/stable-diffusion-2022.webp',
     imageAlt:
       'DreamStudio Lite displaying Stable Diffusion results beside generation controls',
     sources: [
@@ -1782,7 +1782,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 89,
     visual: 'chat',
     accent: '#6f58d9',
-    imageUrl: '/artifacts/character-ai-2022.png',
+    imageUrl: '/artifacts/character-ai-2022.webp',
     imageAlt:
       'Legacy Character.AI homepage with character cards, categories, and navigation',
     sources: [
@@ -1823,7 +1823,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 92,
     visual: 'code',
     accent: '#faf7ee',
-    imageUrl: '/artifacts/cursor-inline-2023.png',
+    imageUrl: '/artifacts/cursor-inline-2023.webp',
     imageAlt:
       'Cursor original dark editor with a Cmd+K prompt floating above selected code',
     sources: [
@@ -1863,7 +1863,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 87,
     visual: 'canvas',
     accent: '#111111',
-    imageUrl: '/artifacts/v0-2023.jpg',
+    imageUrl: '/artifacts/v0-2023.webp',
     imageAlt:
       'Early v0 private-alpha homepage with a natural-language prompt and generated UI examples',
     sources: [
@@ -1904,7 +1904,7 @@ export const artifacts: Array<Artifact> = [
     popularity: 96,
     visual: 'voice',
     accent: '#4ec8ab',
-    imageUrl: '/artifacts/gpt4o-2024.jpg',
+    imageUrl: '/artifacts/gpt4o-2024.webp',
     imageAlt:
       'OpenAI GPT-4o live demo with a phone camera feed shown on the presentation screen',
     sources: [

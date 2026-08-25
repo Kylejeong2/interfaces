@@ -145,11 +145,20 @@ function ArtifactDetail({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      transition={{ duration: 0.16, ease: [0.16, 1, 0.3, 1] }}
       onMouseDown={onClose}
     >
       <m.article
         className="artifact-detail"
         layoutId={`card-${artifact.id}`}
+        transition={{
+          layout: {
+            type: 'spring',
+            stiffness: 260,
+            damping: 30,
+            mass: 0.7,
+          },
+        }}
         onMouseDown={(event) => event.stopPropagation()}
         onClick={(event) => event.stopPropagation()}
         role="dialog"
