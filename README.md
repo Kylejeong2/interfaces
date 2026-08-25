@@ -28,6 +28,8 @@ The Husky pre-commit hook runs formatting and lint checks. If it fails, run `pnp
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) for the artifact standard, research and image requirements, development workflow, and pull request checklist.
 
+Artifact captures must be submitted as WebP pairs: a full-size `product-year.webp` image for the detail view and a `product-year-thumb.webp` image no wider than 640 px for the timeline. Do not add PNG or JPEG captures. The contribution guide includes the conversion commands and verification steps.
+
 Before participating, read the [Code of Conduct](CODE_OF_CONDUCT.md). Report vulnerabilities through the private process in [SECURITY.md](SECURITY.md).
 
 ## License

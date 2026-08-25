@@ -5,7 +5,7 @@ import {
   useSpring,
   useTransform,
 } from 'motion/react'
-import { useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { memo, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { ArtifactVisual } from './ArtifactVisual'
 import type { CSSProperties, KeyboardEvent } from 'react'
 import type { Artifact } from '#/data/artifacts'
@@ -28,7 +28,7 @@ const shortMonth = new Intl.DateTimeFormat('en-US', {
   timeZone: 'UTC',
 })
 
-export function ConstellationTimeline({
+export const ConstellationTimeline = memo(function Timeline({
   artifacts,
   onSelect,
 }: ConstellationTimelineProps) {
@@ -61,10 +61,20 @@ export function ConstellationTimeline({
     if (!viewport || !track) return
 
     const measure = () => {
-      setScrollDistance(Math.max(0, track.scrollWidth - viewport.clientWidth))
+      const nextScrollDistance = Math.max(
+        0,
+        track.scrollWidth - viewport.clientWidth,
+      )
+      setScrollDistance((current) =>
+        current === nextScrollDistance ? current : nextScrollDistance,
+      )
 
       const stickyTop = Number.parseFloat(getComputedStyle(viewport).top) || 0
-      setStackAbove(stickyTop + viewport.clientHeight > window.innerHeight + 1)
+      const nextStackAbove =
+        stickyTop + viewport.clientHeight > window.innerHeight + 1
+      setStackAbove((current) =>
+        current === nextStackAbove ? current : nextStackAbove,
+      )
     }
     const observer = new ResizeObserver(measure)
     observer.observe(viewport)
@@ -243,7 +253,7 @@ export function ConstellationTimeline({
                         }
                   }
                   whileFocus={{ scale: 1.025 }}
-                  transition={{ type: 'spring', stiffness: 135, damping: 17 }}
+                  transition={{ type: 'spring', stiffness: 220, damping: 24 }}
                   onFocus={() => setFocusIndex(index)}
                   onKeyDown={(event) => onNodeKeyDown(event, index)}
                   onClick={() => onSelect(artifact)}
@@ -264,7 +274,7 @@ export function ConstellationTimeline({
       </div>
     </div>
   )
-}
+})
 
 function formatReleaseDate(artifact: Artifact) {
   const date = new Date(`${artifact.date}T00:00:00Z`)

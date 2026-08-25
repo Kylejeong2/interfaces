@@ -8,13 +8,17 @@ export function ArtifactVisual({
   expanded?: boolean
 }) {
   if (artifact.imageUrl) {
+    const imageUrl = expanded
+      ? artifact.imageUrl
+      : artifact.imageUrl.replace(/\.webp$/, '-thumb.webp')
+
     return (
       <div
         className="artifact-visual artifact-visual--image"
         style={{ '--accent': artifact.accent } as React.CSSProperties}
       >
         <img
-          src={artifact.imageUrl}
+          src={imageUrl}
           alt={artifact.imageAlt ?? `${artifact.name} interface`}
           loading={expanded ? 'eager' : 'lazy'}
           decoding="async"
