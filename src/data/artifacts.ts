@@ -1514,6 +1514,57 @@ export const artifacts: Array<Artifact> = [
     ],
   },
   {
+    id: 'instinct-2026',
+    date: '2026-08-26',
+    year: 2026,
+    name: 'Instinct',
+    edition: 'Personal agent beta',
+    maker: 'Spear Street Technology',
+    description:
+      'A personal agent reached through ordinary texts, calls, email, and messaging apps, with its own phone and computer for carrying out work across connected services.',
+    changed:
+      'The messaging thread became only the front door. A persistent model of the person, broad device context, and agent-operated devices moved the real interface into the user’s existing digital life.',
+    lineage:
+      'Voice assistants + messaging agents + computer use → cross-channel personal operator',
+    impact:
+      'Its invite-only rise made the “no new interfaces” thesis unusually concrete, while also exposing the trust and permission costs of giving one agent access to personal communications, screens, and accounts.',
+    forms: ['Chat', 'Voice', 'Agents', 'Computer use', 'Ambient'],
+    layers: ['Assistant', 'Consumer product'],
+    popularity: 78,
+    visual: 'agent',
+    accent: '#e73320',
+    imageUrl: '/artifacts/instinct-2026.webp',
+    imageAlt:
+      'Instinct workspace showing contact channels and connected services beside an Apple Messages conversation with the assistant',
+    sources: [
+      {
+        label: 'Founder introduces Instinct',
+        url: 'https://x.com/noahrshinn/status/2092691344456351744',
+        kind: 'source',
+      },
+      {
+        label: 'Instinct product overview',
+        url: 'https://instinct.co/',
+        kind: 'source',
+      },
+      {
+        label: 'Interface capture: workspace and Messages',
+        url: 'https://x.com/clairevo/status/2090929592853037078',
+        kind: 'source',
+      },
+      {
+        label: 'Private-beta adoption and product reporting',
+        url: 'https://www.wsj.com/tech/ai/the-latest-viral-ai-assistant-rocketing-across-silicon-valley-abb46276',
+        kind: 'source',
+      },
+      {
+        label: 'Connected-service and action permissions',
+        url: 'https://instinct.co/terms',
+        kind: 'source',
+      },
+    ],
+  },
+  {
     id: 'spotify-discover-weekly-2015',
     date: '2015-07-01',
     datePrecision: 'month',
