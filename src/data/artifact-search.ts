@@ -92,6 +92,18 @@ const artifactKeywords: Record<string, ReadonlyArray<string>> = {
     'recipes',
     'texting',
   ],
+  'instinct-2026': [
+    'Spear Street Technology',
+    'iMessage',
+    'WhatsApp',
+    'email agent',
+    'personal agent',
+    'personal operator',
+    'persistent assistant',
+    'connected services',
+    'no new interfaces',
+    'texting',
+  ],
 }
 
 export function getArtifactSearchKeywords(artifact: Artifact) {
