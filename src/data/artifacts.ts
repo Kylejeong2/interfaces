@@ -1449,7 +1449,7 @@ export const artifacts: Array<Artifact> = [
     accent: '#d9553c',
     imageUrl: '/artifacts/openclaw-2026.webp',
     imageAlt:
-      'An OpenClaw agent delivering a pull request review inside a Telegram chat',
+      'OpenClaw web chat interface running a Skill Workshop session with tool calls and a message composer',
     sources: [
       {
         label: 'OpenClaw repository',
