@@ -127,7 +127,7 @@ const artifactKeywords: Record<string, ReadonlyArray<string>> = {
   ],
 }
 
-export function getArtifactSearchKeywords(artifact: Artifact) {
+function getArtifactSearchKeywords(artifact: Artifact) {
   return Array.from(
     new Set([
       artifact.name,

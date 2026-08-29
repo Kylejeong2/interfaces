@@ -23,7 +23,7 @@ export type ProductLayer =
   | 'Knowledge tool'
   | 'Embodied system'
 
-export type ArtifactSource = {
+type ArtifactSource = {
   label: string
   url: string
   kind: 'source' | 'watch'
@@ -45,18 +45,9 @@ export type Artifact = {
   layers: Array<ProductLayer>
   sources: Array<ArtifactSource>
   popularity: number
-  visual:
-    | 'voice'
-    | 'cards'
-    | 'chat'
-    | 'vision'
-    | 'canvas'
-    | 'code'
-    | 'search'
-    | 'agent'
   accent: string
-  imageUrl?: string
-  imageAlt?: string
+  imageUrl: string
+  imageAlt: string
 }
 
 export const artifacts: Array<Artifact> = [
@@ -78,7 +69,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Voice', 'Chat'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 96,
-    visual: 'voice',
     accent: '#7d6bff',
     imageUrl: '/artifacts/siri-2011.webp',
     imageAlt: 'The original Siri interface in iOS 5',
@@ -113,7 +103,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Ambient', 'Search'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 82,
-    visual: 'cards',
     accent: '#5f87ff',
     imageUrl: '/artifacts/google-now-2012.webp',
     imageAlt:
@@ -155,7 +144,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Voice', 'Ambient'],
     layers: ['Device', 'Assistant'],
     popularity: 94,
-    visual: 'voice',
     accent: '#39a8df',
     imageUrl: '/artifacts/amazon-echo.webp',
     imageAlt: 'The team behind Amazon Alexa with early Echo devices',
@@ -190,7 +178,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Vision', 'Search'],
     layers: ['Consumer product'],
     popularity: 91,
-    visual: 'vision',
     accent: '#f5b82e',
     imageUrl: '/artifacts/google-photos.webp',
     imageAlt: 'The Google Photos interface at launch',
@@ -224,7 +211,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Vision', 'Canvas'],
     layers: ['Creative tool', 'Consumer product'],
     popularity: 79,
-    visual: 'canvas',
     accent: '#ff4b63',
     imageUrl: '/artifacts/prisma-2016.webp',
     imageAlt:
@@ -264,7 +250,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Voice', 'Chat', 'Ambient'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 92,
-    visual: 'chat',
     accent: '#4285f4',
     imageUrl: '/artifacts/google-assistant-2016.webp',
     imageAlt: 'The original Google Assistant conversational interface',
@@ -298,7 +283,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Vision', 'Search'],
     layers: ['Consumer product', 'Search engine'],
     popularity: 89,
-    visual: 'vision',
     accent: '#2bb673',
     imageUrl: '/artifacts/google-lens-2017.webp',
     imageAlt: 'Google Lens recognizing the world through a phone camera',
@@ -333,7 +317,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Voice', 'Agents'],
     layers: ['Assistant'],
     popularity: 84,
-    visual: 'agent',
     accent: '#e65f51',
     imageUrl: '/artifacts/google-duplex-2018.webp',
     imageAlt: 'Google Assistant showing a completed Duplex reservation',
@@ -368,7 +351,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat'],
     layers: ['Consumer product'],
     popularity: 87,
-    visual: 'code',
     accent: '#587df2',
     imageUrl: '/artifacts/smart-compose-2018.webp',
     imageAlt: 'Gmail Smart Compose suggesting inline email text',
@@ -403,7 +385,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Canvas', 'Vision'],
     layers: ['Creative tool'],
     popularity: 85,
-    visual: 'canvas',
     accent: '#e4a647',
     imageUrl: '/artifacts/dall-e-2021.webp',
     imageAlt:
@@ -439,7 +420,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Code'],
     layers: ['Developer tool'],
     popularity: 94,
-    visual: 'code',
     accent: '#8a7cff',
     imageUrl: '/artifacts/github-copilot.webp',
     imageAlt: 'GitHub Copilot completing code inside an editor',
@@ -473,7 +453,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Canvas', 'Vision'],
     layers: ['Creative tool'],
     popularity: 91,
-    visual: 'canvas',
     accent: '#ff795f',
     imageUrl: '/artifacts/dall-e-2-2022.webp',
     imageAlt:
@@ -514,7 +493,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat', 'Canvas'],
     layers: ['Creative tool'],
     popularity: 93,
-    visual: 'canvas',
     accent: '#6a8cff',
     imageUrl: '/artifacts/midjourney-discord-2022.webp',
     imageAlt: 'Midjourney image generation inside Discord',
@@ -549,7 +527,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 100,
-    visual: 'chat',
     accent: '#10a37f',
     imageUrl: '/artifacts/chatgpt-2022.webp',
     imageAlt:
@@ -589,7 +566,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Search', 'Chat'],
     layers: ['Search engine', 'Assistant'],
     popularity: 90,
-    visual: 'search',
     accent: '#20a39e',
     imageUrl: '/artifacts/perplexity-2022.webp',
     imageAlt:
@@ -629,7 +605,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Search', 'Chat'],
     layers: ['Search engine', 'Assistant'],
     popularity: 92,
-    visual: 'search',
     accent: '#2176ff',
     imageUrl: '/artifacts/new-bing-2023.webp',
     imageAlt: 'The New Bing conversational search interface',
@@ -664,7 +639,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Canvas', 'Vision'],
     layers: ['Creative tool'],
     popularity: 92,
-    visual: 'canvas',
     accent: '#e54d4d',
     imageUrl: '/artifacts/adobe-firefly.webp',
     imageAlt: 'Adobe Firefly generative image interface and outputs',
@@ -699,7 +673,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat', 'Vision', 'Voice'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 96,
-    visual: 'vision',
     accent: '#8d79ff',
     imageUrl: '/artifacts/gpt4-vision-2023.webp',
     imageAlt:
@@ -739,7 +712,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Voice', 'Vision', 'Agents'],
     layers: ['Device', 'Assistant'],
     popularity: 72,
-    visual: 'agent',
     accent: '#ff5b48',
     imageUrl: '/artifacts/rabbit-r1-2024.webp',
     imageAlt:
@@ -775,7 +747,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Code', 'Agents', 'Computer use'],
     layers: ['Developer tool'],
     popularity: 93,
-    visual: 'agent',
     accent: '#7c72e8',
     imageUrl: '/artifacts/devin-2024.webp',
     imageAlt:
@@ -816,7 +787,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Canvas', 'Vision'],
     layers: ['Creative tool'],
     popularity: 91,
-    visual: 'canvas',
     accent: '#ff664f',
     imageUrl: '/artifacts/sora-2024.webp',
     imageAlt:
@@ -856,7 +826,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat', 'Canvas', 'Code'],
     layers: ['Assistant', 'Creative tool'],
     popularity: 92,
-    visual: 'canvas',
     accent: '#d97757',
     imageUrl: '/artifacts/claude-artifacts.webp',
     imageAlt:
@@ -892,7 +861,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Voice', 'Chat'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 88,
-    visual: 'voice',
     accent: '#796eff',
     imageUrl: '/artifacts/gemini-live.webp',
     imageAlt: 'Gemini Live running on a mobile phone',
@@ -927,7 +895,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Voice', 'Chat'],
     layers: ['Consumer product', 'Assistant'],
     popularity: 90,
-    visual: 'voice',
     accent: '#e7a528',
     imageUrl: '/artifacts/notebooklm-audio.webp',
     imageAlt: 'NotebookLM Audio Overview player and source notebook',
@@ -961,7 +928,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat', 'Canvas', 'Code'],
     layers: ['Assistant', 'Creative tool'],
     popularity: 90,
-    visual: 'canvas',
     accent: '#10a37f',
     imageUrl: '/artifacts/chatgpt-canvas-2024.webp',
     imageAlt:
@@ -1002,7 +968,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Computer use', 'Vision', 'Agents'],
     layers: ['Developer tool', 'Assistant'],
     popularity: 86,
-    visual: 'agent',
     accent: '#d97757',
     imageUrl: '/artifacts/computer-use-2024.webp',
     imageAlt:
@@ -1038,7 +1003,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Agents', 'Computer use', 'Vision'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 88,
-    visual: 'agent',
     accent: '#111111',
     imageUrl: '/artifacts/operator-2025.webp',
     imageAlt: 'Operator working through a task in a visible browser',
@@ -1072,7 +1036,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Agents', 'Search'],
     layers: ['Assistant', 'Search engine'],
     popularity: 91,
-    visual: 'search',
     accent: '#3266d5',
     imageUrl: '/artifacts/deep-research-2025.webp',
     imageAlt: 'ChatGPT Deep Research activity and source panel',
@@ -1107,7 +1070,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Code', 'Agents'],
     layers: ['Developer tool'],
     popularity: 92,
-    visual: 'code',
     accent: '#d97757',
     imageUrl: '/artifacts/claude-code-2025.webp',
     imageAlt: 'Claude Code running as a terminal coding agent',
@@ -1141,7 +1103,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat', 'Canvas', 'Vision'],
     layers: ['Creative tool', 'Assistant'],
     popularity: 97,
-    visual: 'canvas',
     accent: '#ef8f59',
     imageUrl: '/artifacts/chatgpt-images-2025.webp',
     imageAlt:
@@ -1182,7 +1143,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Agents', 'Computer use', 'Vision'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 88,
-    visual: 'agent',
     accent: '#4978ee',
     imageUrl: '/artifacts/manus-2025.webp',
     imageAlt:
@@ -1223,7 +1183,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Code', 'Agents'],
     layers: ['Developer tool'],
     popularity: 89,
-    visual: 'agent',
     accent: '#111111',
     imageUrl: '/artifacts/codex-2025.webp',
     imageAlt: 'Codex cloud task review with a work summary and code diff',
@@ -1258,7 +1217,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Video', 'Audio', 'Canvas'],
     layers: ['Creative tool'],
     popularity: 86,
-    visual: 'canvas',
     accent: '#4578f8',
     imageUrl: '/artifacts/flow.webp',
     imageAlt: 'Google Flow generative filmmaking workspace',
@@ -1293,7 +1251,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Agents', 'Computer use', 'Search', 'Vision'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 89,
-    visual: 'agent',
     accent: '#111111',
     imageUrl: '/artifacts/chatgpt-agent-2025.webp',
     imageAlt:
@@ -1334,7 +1291,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Audio', 'Canvas'],
     layers: ['Creative tool'],
     popularity: 80,
-    visual: 'canvas',
     accent: '#ff3f7f',
     imageUrl: '/artifacts/suno-studio.webp',
     imageAlt: 'Suno Studio multitrack generative music canvas',
@@ -1369,7 +1325,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Agents', 'Computer use'],
     layers: ['Knowledge tool', 'Assistant'],
     popularity: 81,
-    visual: 'agent',
     accent: '#d97757',
     imageUrl: '/artifacts/claude-cowork-2026.webp',
     imageAlt:
@@ -1410,7 +1365,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Embodied', 'Vision', 'Agents'],
     layers: ['Embodied system'],
     popularity: 74,
-    visual: 'vision',
     accent: '#f0bd25',
     imageUrl: '/artifacts/helix-02.webp',
     imageAlt: 'Figure Helix 02 humanoid performing a household task',
@@ -1445,7 +1399,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat', 'Agents', 'Ambient'],
     layers: ['Assistant', 'Developer tool'],
     popularity: 85,
-    visual: 'chat',
     accent: '#d9553c',
     imageUrl: '/artifacts/openclaw-2026.webp',
     imageAlt:
@@ -1485,7 +1438,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Code', 'Agents'],
     layers: ['Developer tool'],
     popularity: 88,
-    visual: 'agent',
     accent: '#111111',
     imageUrl: '/artifacts/codex-app-2026.webp',
     imageAlt:
@@ -1526,7 +1478,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat', 'Agents', 'Ambient'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 86,
-    visual: 'chat',
     accent: '#55a6a2',
     imageUrl: '/artifacts/poke-2026.webp',
     imageAlt:
@@ -1572,7 +1523,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat', 'Agents', 'Code'],
     layers: ['Assistant', 'Developer tool'],
     popularity: 79,
-    visual: 'agent',
     accent: '#2b45d9',
     imageUrl: '/artifacts/hermes-agent-2026.webp',
     imageAlt:
@@ -1613,7 +1563,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat', 'Voice', 'Agents', 'Computer use', 'Ambient'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 78,
-    visual: 'agent',
     accent: '#e73320',
     imageUrl: '/artifacts/instinct-2026.webp',
     imageAlt:
@@ -1665,7 +1614,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Recommendation', 'Audio'],
     layers: ['Consumer product'],
     popularity: 91,
-    visual: 'cards',
     accent: '#1db954',
     imageUrl: '/artifacts/spotify-discover-weekly-2015.webp',
     imageAlt:
@@ -1707,7 +1655,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Embodied', 'Vision'],
     layers: ['Device', 'Embodied system'],
     popularity: 89,
-    visual: 'vision',
     accent: '#d13a35',
     imageUrl: '/artifacts/tesla-autopilot-2015.webp',
     imageAlt:
@@ -1748,7 +1695,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Recommendation', 'Vision', 'Video'],
     layers: ['Consumer product'],
     popularity: 97,
-    visual: 'cards',
     accent: '#fe2c55',
     imageUrl: '/artifacts/tiktok-for-you-2018.webp',
     imageAlt:
@@ -1789,7 +1735,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Embodied', 'Vision', 'Agents'],
     layers: ['Consumer product', 'Embodied system'],
     popularity: 84,
-    visual: 'agent',
     accent: '#1573e6',
     imageUrl: '/artifacts/waymo-one-2018.webp',
     imageAlt:
@@ -1830,7 +1775,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat', 'Code'],
     layers: ['Developer tool'],
     popularity: 82,
-    visual: 'code',
     accent: '#10a37f',
     imageUrl: '/artifacts/gpt3-playground-2020.webp',
     imageAlt:
@@ -1871,7 +1815,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Canvas', 'Vision'],
     layers: ['Creative tool', 'Developer tool'],
     popularity: 93,
-    visual: 'canvas',
     accent: '#7f62d9',
     imageUrl: '/artifacts/stable-diffusion-2022.webp',
     imageAlt:
@@ -1913,7 +1856,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Chat'],
     layers: ['Consumer product'],
     popularity: 89,
-    visual: 'chat',
     accent: '#6f58d9',
     imageUrl: '/artifacts/character-ai-2022.webp',
     imageAlt:
@@ -1954,7 +1896,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Code', 'Chat'],
     layers: ['Developer tool'],
     popularity: 92,
-    visual: 'code',
     accent: '#faf7ee',
     imageUrl: '/artifacts/cursor-inline-2023.webp',
     imageAlt:
@@ -1994,7 +1935,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Canvas', 'Code', 'Chat'],
     layers: ['Creative tool', 'Developer tool'],
     popularity: 87,
-    visual: 'canvas',
     accent: '#111111',
     imageUrl: '/artifacts/v0-2023.webp',
     imageAlt:
@@ -2035,7 +1975,6 @@ export const artifacts: Array<Artifact> = [
     forms: ['Voice', 'Vision', 'Chat'],
     layers: ['Assistant', 'Consumer product'],
     popularity: 96,
-    visual: 'voice',
     accent: '#4ec8ab',
     imageUrl: '/artifacts/gpt4o-2024.webp',
     imageAlt:
