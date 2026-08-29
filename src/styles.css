@@ -109,11 +109,14 @@ button {
   padding: 28px 24px 24px;
   border-bottom: 1px solid var(--line);
 }
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
 .search-trigger {
-  position: absolute;
-  top: 22px;
-  right: 24px;
-  z-index: 3;
+  flex: none;
   display: flex;
   align-items: center;
   gap: 13px;
@@ -125,9 +128,6 @@ button {
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: blur(12px);
   cursor: pointer;
-}
-.museum-shell--constellation .hero > .search-trigger {
-  position: absolute;
 }
 .search-trigger:hover,
 .search-trigger:focus-visible {
@@ -1463,9 +1463,14 @@ button {
     min-height: 82svh;
     padding: 24px 14px 18px;
   }
+  .hero-top {
+    gap: 10px;
+  }
+  .search-trigger kbd {
+    display: none;
+  }
   .search-trigger {
-    top: 18px;
-    right: 14px;
+    padding-inline: 14px;
   }
   .search-backdrop {
     align-items: flex-end;

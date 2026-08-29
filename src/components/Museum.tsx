@@ -66,20 +66,22 @@ export function Museum() {
     <LazyMotion features={loadMotionFeatures} strict>
       <main className="museum-shell museum-shell--constellation">
         <section className="hero" id="top">
-          <button
-            className="search-trigger"
-            type="button"
-            onMouseDown={(event) => {
-              event.preventDefault()
-              setSearchOpen(true)
-            }}
-            onClick={() => setSearchOpen(true)}
-            aria-label="Search interfaces"
-          >
-            <span>Search interfaces</span>
-            <kbd>⌘K</kbd>
-          </button>
-          <p className="eyebrow">A living collection of machine interfaces</p>
+          <div className="hero-top">
+            <p className="eyebrow">A living collection of machine interfaces</p>
+            <button
+              className="search-trigger"
+              type="button"
+              onMouseDown={(event) => {
+                event.preventDefault()
+                setSearchOpen(true)
+              }}
+              onClick={() => setSearchOpen(true)}
+              aria-label="Search interfaces"
+            >
+              <span>Search interfaces</span>
+              <kbd>⌘K</kbd>
+            </button>
+          </div>
           <h1>
             <span>The AI</span>
             <span>Interface Museum</span>
