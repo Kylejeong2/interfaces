@@ -1428,6 +1428,47 @@ export const artifacts: Array<Artifact> = [
     ],
   },
   {
+    id: 'openclaw-2026',
+    date: '2026-01-30',
+    year: 2026,
+    name: 'OpenClaw',
+    edition: 'The self-hosted assistant',
+    maker: 'Peter Steinberger',
+    description:
+      'An open-source personal agent that runs on the user’s own devices and answers through existing messaging channels like WhatsApp, Telegram, Discord, and iMessage via a single gateway.',
+    changed:
+      'The assistant became something you host rather than subscribe to. Ordinary chat apps turned into the front end for a fully user-owned, deeply configurable agent.',
+    lineage:
+      'Warelay → Clawdbot → Moltbot → OpenClaw → self-hosted personal agents',
+    impact:
+      'OpenClaw became the most-starred software repository on GitHub within months of launch, with hundreds of thousands of self-hosted installs.',
+    forms: ['Chat', 'Agents', 'Ambient'],
+    layers: ['Assistant', 'Developer tool'],
+    popularity: 85,
+    visual: 'chat',
+    accent: '#d9553c',
+    imageUrl: '/artifacts/openclaw-2026.webp',
+    imageAlt:
+      'OpenClaw web chat interface running a Skill Workshop session with tool calls and a message composer',
+    sources: [
+      {
+        label: 'OpenClaw repository',
+        url: 'https://github.com/openclaw/openclaw',
+        kind: 'source',
+      },
+      {
+        label: 'OpenClaw product overview',
+        url: 'https://openclaw.ai/',
+        kind: 'source',
+      },
+      {
+        label: 'Meet the OpenClaw maintainers',
+        url: 'https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/',
+        kind: 'source',
+      },
+    ],
+  },
+  {
     id: 'codex-app-2026',
     date: '2026-02-02',
     year: 2026,
@@ -1509,6 +1550,47 @@ export const artifacts: Array<Artifact> = [
       {
         label: 'Poke adoption and Cognition announcement',
         url: 'https://cognition.com/blog/interaction',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'hermes-agent-2026',
+    date: '2026-06-02',
+    year: 2026,
+    name: 'Hermes Agent',
+    edition: 'The agent that grows with you',
+    maker: 'Nous Research',
+    description:
+      'A self-improving open-source agent with a built-in learning loop that creates skills from experience, curates its own memory, and meets users across terminal, desktop, and messaging channels.',
+    changed:
+      'The interface stopped being fixed at install time. The agent wrote and refined its own skills and memory, so the product deepened the longer a person used it.',
+    lineage:
+      'Hermes models → hermes-agent CLI and TUI → Hermes Desktop → self-improving personal agents',
+    impact:
+      'Hermes Desktop gave the community’s self-improving agent an official one-click interface, and the repository grew past 200,000 GitHub stars.',
+    forms: ['Chat', 'Agents', 'Code'],
+    layers: ['Assistant', 'Developer tool'],
+    popularity: 79,
+    visual: 'agent',
+    accent: '#2b45d9',
+    imageUrl: '/artifacts/hermes-agent-2026.webp',
+    imageAlt:
+      'Hermes Desktop app with session list, messaging channels, and chat composer',
+    sources: [
+      {
+        label: 'Hermes Agent repository',
+        url: 'https://github.com/NousResearch/hermes-agent',
+        kind: 'source',
+      },
+      {
+        label: 'Hermes Desktop public preview',
+        url: 'https://decrypt.co/369952/hermes-ai-agent-official-app-terminal',
+        kind: 'source',
+      },
+      {
+        label: 'The Surface Release notes',
+        url: 'https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.5',
         kind: 'source',
       },
     ],
