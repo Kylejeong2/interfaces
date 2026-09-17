@@ -2158,7 +2158,7 @@ export const artifacts: Array<Artifact> = [
     accent: '#c99c69',
     imageUrl: '/artifacts/meta-muse-2026.webp',
     imageAlt:
-      'Veda, a customizable Muse avatar, waving with curly hair and a striped scarf',
+      'Muse’s cream-colored furry mascot with a smiling face, from the official Muse homepage',
     sources: [
       {
         label: 'Meta introduces Muse',
@@ -2166,8 +2166,8 @@ export const artifacts: Array<Artifact> = [
         kind: 'source',
       },
       {
-        label: 'Avatar source: Veda in How We Designed Muse',
-        url: 'https://introducing.muse.ai/',
+        label: 'Avatar source: official Muse homepage mascot',
+        url: 'https://muse.ai/landing/brand/hatch.jpg',
         kind: 'source',
       },
     ],
