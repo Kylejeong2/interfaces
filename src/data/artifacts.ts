@@ -1997,4 +1997,179 @@ export const artifacts: Array<Artifact> = [
       },
     ],
   },
+  {
+    id: 'meta-ray-ban-display-2025',
+    date: '2025-09-17',
+    year: 2025,
+    name: 'Meta Ray-Ban Display',
+    edition: 'In-lens AI and neural controls',
+    maker: 'Meta and EssilorLuxottica',
+    description:
+      'AI glasses that show answers, messages, directions, and captions in a small in-lens display, controlled through voice and subtle finger movements detected by the Meta Neural Band.',
+    changed:
+      'The assistant could show information in the wearer’s field of view. Muscle signals at the wrist supplied a quiet way to select and scroll without reaching for a phone.',
+    lineage:
+      'Ray-Ban Meta camera and voice glasses → Meta Ray-Ban Display + Neural Band',
+    impact:
+      'Unveiled at Connect on September 17 and sold in select US stores from September 30, the glasses brought an EMG-controlled AI display into a consumer product.',
+    forms: ['Voice', 'Vision', 'Ambient'],
+    layers: ['Device', 'Assistant', 'Consumer product'],
+    popularity: 82,
+    accent: '#4267b2',
+    imageUrl: '/artifacts/meta-ray-ban-display-2025.webp',
+    imageAlt:
+      'Meta Ray-Ban Display launch demo illustrating a pico de gallo recipe card over the wearer’s view of a tomato plant',
+    sources: [
+      {
+        label: 'Meta Ray-Ban Display announcement and retail release',
+        url: 'https://about.fb.com/news/2025/09/meta-ray-ban-display-ai-glasses-emg-wristband/',
+        kind: 'source',
+      },
+      {
+        label: 'Interface capture: Meta AI with visuals demo, 0:15',
+        url: 'https://about.fb.com/wp-content/uploads/2025/09/02_Meta-AI-With-Visuals.mp4',
+        kind: 'watch',
+      },
+    ],
+  },
+  {
+    id: 'project-genie-2026',
+    date: '2026-01-29',
+    year: 2026,
+    name: 'Project Genie',
+    edition: 'Step into a generated world',
+    maker: 'Google DeepMind',
+    description:
+      'An experimental world-model interface for sketching a scene from text or images, choosing a perspective, and exploring the generated environment with movement controls.',
+    changed:
+      'Movement became input to generation. Instead of watching a finished video, the user steered through an environment that generated the path ahead as they moved.',
+    lineage:
+      'Genie research → Genie 3 → Project Genie world sketching, exploration, and remixing',
+    impact:
+      'The prototype opened interactive world generation to US Google AI Ultra subscribers. At launch, explorations lasted up to 60 seconds, with limitations in physics and character control.',
+    forms: ['Canvas', 'Vision', 'Video'],
+    layers: ['Creative tool', 'Consumer product'],
+    popularity: 76,
+    accent: '#4285f4',
+    imageUrl: '/artifacts/project-genie-2026.webp',
+    imageAlt:
+      'Project Genie world-sketching interface showing a goldfish in a coral reef above prompt and creation controls',
+    sources: [
+      {
+        label: 'Project Genie prototype launch',
+        url: 'https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/',
+        kind: 'source',
+      },
+      {
+        label: 'Interface capture: official world-sketching demo, 0:08',
+        url: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/2494_Genie_Fish_BlogPost.mp4',
+        kind: 'watch',
+      },
+    ],
+  },
+  {
+    id: 'siri-ai-2026',
+    date: '2026-06-08',
+    year: 2026,
+    name: 'Siri AI',
+    edition: 'Conversation across the system',
+    maker: 'Apple',
+    description:
+      'A new Siri interface combining ongoing conversations, a dedicated app for revisiting chats, personal context, onscreen awareness, and actions across apps.',
+    changed:
+      'The brief voice-command exchange expanded into persistent conversation. Users could ask about what was on screen and carry a request into app actions without rebuilding the context.',
+    lineage:
+      'Siri on iPhone 4S → Apple Intelligence → Siri AI and its dedicated conversation app',
+    impact:
+      'Apple made Siri AI available for developer testing on June 8, with the English-language public beta rollout beginning September 14. It extended the original Siri interaction into a systemwide conversational interface.',
+    forms: ['Chat', 'Voice', 'Vision', 'Agents'],
+    layers: ['Assistant', 'Consumer product'],
+    popularity: 88,
+    accent: '#7d6bff',
+    imageUrl: '/artifacts/siri-ai-2026.webp',
+    imageAlt:
+      'Siri AI on iPhone showing an answer about Chapultepec, a follow-up question, and the Ask Siri composer',
+    sources: [
+      {
+        label: 'Developer preview and original Siri app interface capture',
+        url: 'https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant/',
+        kind: 'source',
+      },
+      {
+        label: 'September public beta rollout',
+        url: 'https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'world-labs-atlas-2026',
+    date: '2026-09-01',
+    year: 2026,
+    name: 'World Labs Atlas',
+    edition: 'Spatial control research demo',
+    maker: 'World Labs',
+    description:
+      'A world-model research showcase with interactive camera views, reference-image selection, and explorable 3D reconstructions. Atlas entered early access with select partners at its announcement.',
+    changed:
+      'Camera position and the placement of reference images became explicit controls over generation. The public demos let visitors inspect new viewpoints and scenes assembled from spatial context.',
+    lineage:
+      'World Labs world models and Marble → Atlas spatial-context model → future Marble versions',
+    impact:
+      'Atlas made spatial control inspectable through public demos. Its inclusion records an emerging interaction pattern; broad adoption and downstream influence were not established at launch.',
+    forms: ['Canvas', 'Vision', 'Video'],
+    layers: ['Creative tool', 'Developer tool'],
+    popularity: 68,
+    accent: '#788c7b',
+    imageUrl: '/artifacts/world-labs-atlas-2026.webp',
+    imageAlt:
+      'Atlas camera-control demo with a toy-robot reference image, a camera diagram, scene thumbnails, and a generated view labeled Hover to turn',
+    sources: [
+      {
+        label: 'Atlas announcement and partner early access',
+        url: 'https://www.worldlabs.ai/blog/atlas',
+        kind: 'source',
+      },
+      {
+        label: 'Interface capture: interactive camera-control demo',
+        url: 'https://www.worldlabs.ai/blog/atlas#pixel-perfect-camera-control',
+        kind: 'source',
+      },
+    ],
+  },
+  {
+    id: 'meta-muse-2026',
+    date: '2026-09-08',
+    year: 2026,
+    name: 'Meta Muse',
+    edition: 'Personal agent with visible activity',
+    maker: 'Meta',
+    description:
+      'A personal agent reached through the Muse app or WhatsApp, with a customizable avatar, ongoing conversation, goals, background tasks, and explicit approval controls.',
+    changed:
+      'A continuing message thread became the front door to work that could outlast the conversation. Activity views and structured approvals let users inspect and control what the agent was doing.',
+    lineage:
+      'Meta AI assistant → Muse personal agent → persistent goals, activity, and generated artifacts',
+    impact:
+      'The US rollout brought Meta’s personal agent to mobile and web alongside WhatsApp access. Its activity and approval surfaces made ongoing delegation visible; long-term adoption remained unproven at launch.',
+    forms: ['Chat', 'Agents', 'Ambient'],
+    layers: ['Assistant', 'Consumer product'],
+    popularity: 78,
+    accent: '#c99c69',
+    imageUrl: '/artifacts/meta-muse-2026.webp',
+    imageAlt:
+      'Muse activity view showing the Veda avatar, a Checking price status, an active rain-jacket task, and earlier actions',
+    sources: [
+      {
+        label: 'Meta introduces Muse',
+        url: 'https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/',
+        kind: 'source',
+      },
+      {
+        label: 'Interface capture: How We Designed Muse',
+        url: 'https://introducing.muse.ai/',
+        kind: 'source',
+      },
+    ],
+  },
 ].sort((a, b) => a.date.localeCompare(b.date))
