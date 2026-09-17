@@ -2158,7 +2158,7 @@ export const artifacts: Array<Artifact> = [
     accent: '#c99c69',
     imageUrl: '/artifacts/meta-muse-2026.webp',
     imageAlt:
-      'Muse activity view showing the Veda avatar, a Checking price status, an active rain-jacket task, and earlier actions',
+      'Veda, a customizable Muse avatar, waving with curly hair and a striped scarf',
     sources: [
       {
         label: 'Meta introduces Muse',
@@ -2166,7 +2166,7 @@ export const artifacts: Array<Artifact> = [
         kind: 'source',
       },
       {
-        label: 'Interface capture: How We Designed Muse',
+        label: 'Avatar source: Veda in How We Designed Muse',
         url: 'https://introducing.muse.ai/',
         kind: 'source',
       },
