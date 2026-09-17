@@ -2018,7 +2018,7 @@ export const artifacts: Array<Artifact> = [
     accent: '#4267b2',
     imageUrl: '/artifacts/meta-ray-ban-display-2025.webp',
     imageAlt:
-      'Meta Ray-Ban Display launch demo illustrating a pico de gallo recipe card over the wearer’s view of a tomato plant',
+      'Official Meta Ray-Ban Display illustration showing a Santorini AI answer inside the lens beside the Meta Neural Band',
     sources: [
       {
         label: 'Meta Ray-Ban Display announcement and retail release',
@@ -2026,9 +2026,9 @@ export const artifacts: Array<Artifact> = [
         kind: 'source',
       },
       {
-        label: 'Interface capture: Meta AI with visuals demo, 0:15',
-        url: 'https://about.fb.com/wp-content/uploads/2025/09/02_Meta-AI-With-Visuals.mp4',
-        kind: 'watch',
+        label: 'Interface illustration: in-lens Meta AI and Neural Band',
+        url: 'https://about.fb.com/wp-content/uploads/2025/09/Meta-Ray-Ban-Display_Social-Share.jpg',
+        kind: 'source',
       },
     ],
   },
