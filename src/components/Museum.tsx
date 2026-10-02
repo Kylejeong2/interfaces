@@ -104,13 +104,6 @@ export function Museum() {
           />
         </section>
 
-        <footer className="museum-footer">
-          <p>
-            Built by Kyle Jeong
-            <br />© 2026
-          </p>
-        </footer>
-
         <AnimatePresence>
           {activeArtifact && (
             <ArtifactDetail

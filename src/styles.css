@@ -476,29 +476,6 @@ button {
   object-fit: contain;
   background: #e3e1dc;
 }
-.museum-footer {
-  min-height: 210px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 48px 24px;
-  background: var(--ink);
-  color: var(--paper);
-}
-.museum-footer p {
-  margin: 0;
-  text-align: right;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.5;
-  text-transform: none;
-}
-.museum-shell--constellation .museum-footer {
-  background: #050608;
-  color: #f2f0e8;
-}
-
 .search-backdrop {
   position: fixed;
   inset: 0;
@@ -950,10 +927,6 @@ button {
   }
   .constellation-year {
     font-size: 72px;
-  }
-  .museum-footer {
-    min-height: 170px;
-    padding: 36px 14px;
   }
   .detail-backdrop {
     padding: 0;
